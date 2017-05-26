@@ -3,6 +3,7 @@
 
 
 #include <iostream>
+#include <string>
 
 //kinect2
 #include <libfreenect2/libfreenect2.hpp>
@@ -16,7 +17,6 @@
 
 //pcl 1.7
 #include <pcl/io/pcd_io.h>
-#include <pcl/io/ply_io.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/console/parse.h>

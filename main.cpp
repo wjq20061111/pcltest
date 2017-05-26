@@ -1,6 +1,6 @@
 #include "main.h"
 
-typedef pcl::PointCloud<pcl::PointXYZ> CloudType;
+typedef pcl::PointCloud<pcl::PointXYZRGBA> CloudType;
 
 void pclviewer(const CloudType::Ptr  &cloud);
 
@@ -77,7 +77,7 @@ int main (int argc, char** argv)
 	size_t framecount = 0;
 
 
-	CloudType::Ptr cloud (new CloudType);
+	CloudType::Ptr src_cloud (new CloudType);
 
 	while(!protonect_shutdown && (framemax == (size_t)-1 || framecount < framemax))
 	{
@@ -121,13 +121,19 @@ int main (int argc, char** argv)
 			for(int c=0;c<424;c++)
 			{
 			float point3d[3];
-			registration->getPointXYZ(&undistorted,r,c,point3d[0],point3d[1],point3d[2]);
+			float bgr;
+			registration->getPointXYZRGB(&undistorted,&registered,r,c,point3d[0],point3d[1],point3d[2],bgr);
 			p.x = point3d[0];
 			p.y = point3d[1];
 			p.z = point3d[2];
-			cloud->push_back(p);
+			uint8_t *colorp = reinterpret_cast<uint8_t*>(&bgr);
+			p.b = colorp[0];
+			p.g = colorp[1];
+			p.r = colorp[2];
+			src_cloud->push_back(p);
 			}
 		}
+
 	// Load file | Works with PCD and PLY files
 
 	// Visualization
@@ -146,13 +152,16 @@ int main (int argc, char** argv)
 	// 	while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
 	// 		viewer.spinOnce ();
 	// 	}
-	pclviewer(cloud);
-	
-	framecount++;
-	std::cout << framecount<<std::endl;
+		std::string filen="data.pcd";
+		pcl::io::savePCDFileASCII(filen,*src_cloud);
+		pcl::io::loadPCDFile ("data.pcd", *src_cloud) ;
+		pclviewer(src_cloud);
 
-	int key = cv::waitKey(0);
-	listener.release(frames);
+		framecount++;
+		std::cout << framecount<<std::endl;
+
+		int key = cv::waitKey(0);
+		listener.release(frames);
 	}
 
 	dev->stop();
@@ -166,14 +175,14 @@ void pclviewer(const CloudType::Ptr  &cloud)
 		pcl::visualization::PCLVisualizer viewer ("My example");
 
 	 // Define R,G,B colors for the point cloud
-		pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_color_handler (cloud, 255, 255, 255);
+		//pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_color_handler (cloud, 255, 255, 255);
 	// We add the point cloud to the viewer and pass the color handler
-		viewer.addPointCloud (cloud, cloud_color_handler, "original_cloud");
-
+		//viewer.addPointCloud (cloud, cloud_color_handler, "original_cloud");
+		viewer.addPointCloud (cloud,"cloud");
 
 		viewer.addCoordinateSystem (1.0, "cloud", 0);
-		viewer.setBackgroundColor(0.05, 0.05, 0.05, 0); // Setting background to a dark grey
-		viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "original_cloud");
+		viewer.setBackgroundColor(5, 5, 5, 0); // Setting background to a dark grey
+		viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "cloud");
 
 		while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
 			viewer.spinOnce ();

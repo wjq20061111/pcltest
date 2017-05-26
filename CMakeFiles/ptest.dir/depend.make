@@ -254,11 +254,6 @@ CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/file_io.h
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/impl/pcd_io.hpp
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/lzf.h
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/pcd_io.h
-CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/ply/byte_order.h
-CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/ply/io_operators.h
-CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/ply/ply.h
-CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/ply/ply_parser.h
-CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/io/ply_io.h
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/pcl_base.h
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/pcl_config.h
 CMakeFiles/ptest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/pcl_exports.h
