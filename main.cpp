@@ -1,8 +1,10 @@
 #include "main.h"
 
-typedef pcl::PointCloud<pcl::PointXYZRGBA> CloudType;
+typedef pcl::PointXYZRGBA PointT;
+typedef pcl::PointCloud<PointT> CloudType;
 
 void pclviewer(const CloudType::Ptr  &cloud);
+void threedfilter(const CloudType::Ptr  &cloud);
 
 int main (int argc, char** argv)
 {
@@ -152,9 +154,10 @@ int main (int argc, char** argv)
 	// 	while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
 	// 		viewer.spinOnce ();
 	// 	}
-		std::string filen="data.pcd";
-		pcl::io::savePCDFileASCII(filen,*src_cloud);
-		pcl::io::loadPCDFile ("data.pcd", *src_cloud) ;
+		//std::string filen="data.pcd";
+		pcl::io::savePCDFileASCII("data.pcd",*src_cloud);
+		threedfilter(src_cloud);
+		pcl::io::loadPCDFile ("data_filted.pcd", *src_cloud) ;
 		pclviewer(src_cloud);
 
 		framecount++;
@@ -187,4 +190,15 @@ void pclviewer(const CloudType::Ptr  &cloud)
 		while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
 			viewer.spinOnce ();
 		}
+}
+
+void threedfilter(const CloudType::Ptr  &cloud)
+{
+	CloudType::Ptr cloud_filtered (new CloudType);
+	pcl::StatisticalOutlierRemoval<PointT> sor;
+	sor.setInputCloud (cloud);
+	sor.setMeanK (50);
+  	sor.setStddevMulThresh (1.0);
+  	sor.filter (*cloud_filtered);
+	pcl::io::savePCDFileASCII("data_filted.pcd",*cloud_filtered);
 }

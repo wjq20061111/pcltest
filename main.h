@@ -22,6 +22,7 @@
 #include <pcl/console/parse.h>
 #include <pcl/common/transforms.h>
 #include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/filters/statistical_outlier_removal.h>
 
 using namespace std;
 using namespace cv;
