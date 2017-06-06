@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp
+Change Dir: /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_efefd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_efefd.dir/build.make CMakeFiles/cmTC_efefd.dir/build
-make[1]: 正在进入目录 `/home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_efefd.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_efefd.dir/CheckSymbolExists.c.o   -c /home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_efefd
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efefd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_efefd.dir/CheckSymbolExists.c.o  -o cmTC_efefd 
-CMakeFiles/cmTC_efefd.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Run Build Command:"/usr/bin/make" "cmTC_347c3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_347c3.dir/build.make CMakeFiles/cmTC_347c3.dir/build
+make[1]: 正在进入目录 `/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_347c3.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_347c3.dir/CheckSymbolExists.c.o   -c /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_347c3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_347c3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_347c3.dir/CheckSymbolExists.c.o  -o cmTC_347c3 
+CMakeFiles/cmTC_347c3.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_efefd] 错误 1
-make[1]:正在离开目录 `/home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp'
-make: *** [cmTC_efefd/fast] 错误 2
+make[1]: *** [cmTC_347c3] 错误 1
+make[1]:正在离开目录 `/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp'
+make: *** [cmTC_347c3/fast] 错误 2
 
-File /home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -32,20 +32,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp
+Change Dir: /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_26864/fast"
-/usr/bin/make -f CMakeFiles/cmTC_26864.dir/build.make CMakeFiles/cmTC_26864.dir/build
-make[1]: 正在进入目录 `/home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_26864.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_26864.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.8/Modules/CheckFunctionExists.c
-Linking C executable cmTC_26864
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26864.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_26864.dir/CheckFunctionExists.c.o  -o cmTC_26864 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_0058c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0058c.dir/build.make CMakeFiles/cmTC_0058c.dir/build
+make[1]: 正在进入目录 `/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0058c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0058c.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0058c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0058c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0058c.dir/CheckFunctionExists.c.o  -o cmTC_0058c -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_26864] 错误 1
-make[1]:正在离开目录 `/home/w/Desktop/Workspace/datacapture/CMakeFiles/CMakeTmp'
-make: *** [cmTC_26864/fast] 错误 2
+make[1]: *** [cmTC_0058c] 错误 1
+make[1]:正在离开目录 `/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/CMakeTmp'
+make: *** [cmTC_0058c/fast] 错误 2
 
 

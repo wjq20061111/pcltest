@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/segment
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/segment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/segment
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/segment
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/segment/CMakeFiles /home/w/Desktop/Workspace/segment/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/segment/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,70 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ptest
+# Target rules for targets named findplane
 
 # Build rule for target.
-ptest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ptest
-.PHONY : ptest
+findplane: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 findplane
+.PHONY : findplane
 
 # fast build rule for target.
-ptest/fast:
-	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/build
-.PHONY : ptest/fast
+findplane/fast:
+	$(MAKE) -f CMakeFiles/findplane.dir/build.make CMakeFiles/findplane.dir/build
+.PHONY : findplane/fast
+
+#=============================================================================
+# Target rules for targets named extraction
+
+# Build rule for target.
+extraction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 extraction
+.PHONY : extraction
+
+# fast build rule for target.
+extraction/fast:
+	$(MAKE) -f CMakeFiles/extraction.dir/build.make CMakeFiles/extraction.dir/build
+.PHONY : extraction/fast
+
+#=============================================================================
+# Target rules for targets named cylinder_segmentation
+
+# Build rule for target.
+cylinder_segmentation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cylinder_segmentation
+.PHONY : cylinder_segmentation
+
+# fast build rule for target.
+cylinder_segmentation/fast:
+	$(MAKE) -f CMakeFiles/cylinder_segmentation.dir/build.make CMakeFiles/cylinder_segmentation.dir/build
+.PHONY : cylinder_segmentation/fast
+
+cylinder_segmentation.o: cylinder_segmentation.cpp.o
+
+.PHONY : cylinder_segmentation.o
+
+# target to build an object file
+cylinder_segmentation.cpp.o:
+	$(MAKE) -f CMakeFiles/cylinder_segmentation.dir/build.make CMakeFiles/cylinder_segmentation.dir/cylinder_segmentation.cpp.o
+.PHONY : cylinder_segmentation.cpp.o
+
+cylinder_segmentation.i: cylinder_segmentation.cpp.i
+
+.PHONY : cylinder_segmentation.i
+
+# target to preprocess a source file
+cylinder_segmentation.cpp.i:
+	$(MAKE) -f CMakeFiles/cylinder_segmentation.dir/build.make CMakeFiles/cylinder_segmentation.dir/cylinder_segmentation.cpp.i
+.PHONY : cylinder_segmentation.cpp.i
+
+cylinder_segmentation.s: cylinder_segmentation.cpp.s
+
+.PHONY : cylinder_segmentation.s
+
+# target to generate assembly for a file
+cylinder_segmentation.cpp.s:
+	$(MAKE) -f CMakeFiles/cylinder_segmentation.dir/build.make CMakeFiles/cylinder_segmentation.dir/cylinder_segmentation.cpp.s
+.PHONY : cylinder_segmentation.cpp.s
 
 extraction.o: extraction.cpp.o
 
@@ -129,7 +182,7 @@ extraction.o: extraction.cpp.o
 
 # target to build an object file
 extraction.cpp.o:
-	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/extraction.cpp.o
+	$(MAKE) -f CMakeFiles/extraction.dir/build.make CMakeFiles/extraction.dir/extraction.cpp.o
 .PHONY : extraction.cpp.o
 
 extraction.i: extraction.cpp.i
@@ -138,7 +191,7 @@ extraction.i: extraction.cpp.i
 
 # target to preprocess a source file
 extraction.cpp.i:
-	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/extraction.cpp.i
+	$(MAKE) -f CMakeFiles/extraction.dir/build.make CMakeFiles/extraction.dir/extraction.cpp.i
 .PHONY : extraction.cpp.i
 
 extraction.s: extraction.cpp.s
@@ -147,8 +200,35 @@ extraction.s: extraction.cpp.s
 
 # target to generate assembly for a file
 extraction.cpp.s:
-	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/extraction.cpp.s
+	$(MAKE) -f CMakeFiles/extraction.dir/build.make CMakeFiles/extraction.dir/extraction.cpp.s
 .PHONY : extraction.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/findplane.dir/build.make CMakeFiles/findplane.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/findplane.dir/build.make CMakeFiles/findplane.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/findplane.dir/build.make CMakeFiles/findplane.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -158,10 +238,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ptest"
+	@echo "... findplane"
+	@echo "... extraction"
+	@echo "... cylinder_segmentation"
+	@echo "... cylinder_segmentation.o"
+	@echo "... cylinder_segmentation.i"
+	@echo "... cylinder_segmentation.s"
 	@echo "... extraction.o"
 	@echo "... extraction.i"
 	@echo "... extraction.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

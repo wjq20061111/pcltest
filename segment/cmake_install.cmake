@@ -1,4 +1,4 @@
-# Install script for directory: /home/w/Desktop/Workspace/segment
+# Install script for directory: /home/w/Desktop/Workspace/pcltest/segment
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/w/Desktop/Workspace/segment/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/w/Desktop/Workspace/pcltest/segment/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

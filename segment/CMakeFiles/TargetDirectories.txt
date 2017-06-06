@@ -1,3 +1,5 @@
-/home/w/Desktop/Workspace/segment/CMakeFiles/rebuild_cache.dir
-/home/w/Desktop/Workspace/segment/CMakeFiles/edit_cache.dir
-/home/w/Desktop/Workspace/segment/CMakeFiles/ptest.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/rebuild_cache.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/edit_cache.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/findplane.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/extraction.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/cylinder_segmentation.dir

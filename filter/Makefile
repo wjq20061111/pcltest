@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/filter
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/filter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/filter
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/filter
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/filter/CMakeFiles /home/w/Desktop/Workspace/filter/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/filter/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named downsample
+
+# Build rule for target.
+downsample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 downsample
+.PHONY : downsample
+
+# fast build rule for target.
+downsample/fast:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/build
+.PHONY : downsample/fast
+
+#=============================================================================
 # Target rules for targets named Passthrough_Filter
 
 # Build rule for target.
@@ -122,6 +135,19 @@ Passthrough_Filter: cmake_check_build_system
 Passthrough_Filter/fast:
 	$(MAKE) -f CMakeFiles/Passthrough_Filter.dir/build.make CMakeFiles/Passthrough_Filter.dir/build
 .PHONY : Passthrough_Filter/fast
+
+#=============================================================================
+# Target rules for targets named filter
+
+# Build rule for target.
+filter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filter
+.PHONY : filter
+
+# fast build rule for target.
+filter/fast:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/build
+.PHONY : filter/fast
 
 Passthrough_Filter.o: Passthrough_Filter.cpp.o
 
@@ -150,6 +176,60 @@ Passthrough_Filter.cpp.s:
 	$(MAKE) -f CMakeFiles/Passthrough_Filter.dir/build.make CMakeFiles/Passthrough_Filter.dir/Passthrough_Filter.cpp.s
 .PHONY : Passthrough_Filter.cpp.s
 
+downsample.o: downsample.cpp.o
+
+.PHONY : downsample.o
+
+# target to build an object file
+downsample.cpp.o:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/downsample.cpp.o
+.PHONY : downsample.cpp.o
+
+downsample.i: downsample.cpp.i
+
+.PHONY : downsample.i
+
+# target to preprocess a source file
+downsample.cpp.i:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/downsample.cpp.i
+.PHONY : downsample.cpp.i
+
+downsample.s: downsample.cpp.s
+
+.PHONY : downsample.s
+
+# target to generate assembly for a file
+downsample.cpp.s:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/downsample.cpp.s
+.PHONY : downsample.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +237,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... downsample"
 	@echo "... Passthrough_Filter"
+	@echo "... edit_cache"
+	@echo "... filter"
 	@echo "... Passthrough_Filter.o"
 	@echo "... Passthrough_Filter.i"
 	@echo "... Passthrough_Filter.s"
+	@echo "... downsample.o"
+	@echo "... downsample.i"
+	@echo "... downsample.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

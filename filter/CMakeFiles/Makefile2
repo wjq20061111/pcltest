@@ -54,10 +54,47 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/filter
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/filter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/filter
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/filter
+
+#=============================================================================
+# Target rules for target CMakeFiles/downsample.dir
+
+# All Build rule for target.
+CMakeFiles/downsample.dir/all:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/depend
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/filter/CMakeFiles --progress-num=3,4 "Built target downsample"
+.PHONY : CMakeFiles/downsample.dir/all
+
+# Include target in all.
+all: CMakeFiles/downsample.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/downsample.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/downsample.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 0
+.PHONY : CMakeFiles/downsample.dir/rule
+
+# Convenience name for target.
+downsample: CMakeFiles/downsample.dir/rule
+
+.PHONY : downsample
+
+# clean rule for target.
+CMakeFiles/downsample.dir/clean:
+	$(MAKE) -f CMakeFiles/downsample.dir/build.make CMakeFiles/downsample.dir/clean
+.PHONY : CMakeFiles/downsample.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/downsample.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Passthrough_Filter.dir
@@ -66,7 +103,7 @@ CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/filter
 CMakeFiles/Passthrough_Filter.dir/all:
 	$(MAKE) -f CMakeFiles/Passthrough_Filter.dir/build.make CMakeFiles/Passthrough_Filter.dir/depend
 	$(MAKE) -f CMakeFiles/Passthrough_Filter.dir/build.make CMakeFiles/Passthrough_Filter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/filter/CMakeFiles --progress-num=1,2 "Built target Passthrough_Filter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/filter/CMakeFiles --progress-num=1,2 "Built target Passthrough_Filter"
 .PHONY : CMakeFiles/Passthrough_Filter.dir/all
 
 # Include target in all.
@@ -76,9 +113,9 @@ all: CMakeFiles/Passthrough_Filter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Passthrough_Filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/filter/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Passthrough_Filter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/filter/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 0
 .PHONY : CMakeFiles/Passthrough_Filter.dir/rule
 
 # Convenience name for target.
@@ -93,6 +130,43 @@ CMakeFiles/Passthrough_Filter.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/Passthrough_Filter.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/filter.dir
+
+# All Build rule for target.
+CMakeFiles/filter.dir/all:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/depend
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/filter/CMakeFiles --progress-num=5,6 "Built target filter"
+.PHONY : CMakeFiles/filter.dir/all
+
+# Include target in all.
+all: CMakeFiles/filter.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/filter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/filter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/filter/CMakeFiles 0
+.PHONY : CMakeFiles/filter.dir/rule
+
+# Convenience name for target.
+filter: CMakeFiles/filter.dir/rule
+
+.PHONY : filter
+
+# clean rule for target.
+CMakeFiles/filter.dir/clean:
+	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/clean
+.PHONY : CMakeFiles/filter.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/filter.dir/clean
 
 .PHONY : clean
 

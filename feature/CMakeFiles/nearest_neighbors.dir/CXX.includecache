@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/w/Desktop/Workspace/feature/nearest_neighbors.cpp
+/home/w/Desktop/Workspace/pcltest/feature/nearest_neighbors.cpp
 pcl/point_types.h
 -
 pcl/point_cloud.h
