@@ -1,0 +1,3 @@
+/home/w/Desktop/Workspace/segment/CMakeFiles/rebuild_cache.dir
+/home/w/Desktop/Workspace/segment/CMakeFiles/edit_cache.dir
+/home/w/Desktop/Workspace/segment/CMakeFiles/ptest.dir

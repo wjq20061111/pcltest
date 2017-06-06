@@ -1,0 +1,39 @@
+
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12.1)
+PROJECT(libfreenect2_opencv_test)
+
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+
+SET(freenect2_LIBRARIES freenect2)
+SET(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} $ENV{HOME}/freenect2/lib/cmake/freenect2)
+
+FIND_PACKAGE( OpenCV REQUIRED )
+FIND_PACKAGE(freenect2 REQUIRED)
+FIND_PACKAGE(PCL 1.7 REQUIRED)
+FIND_PACKAGE(Flann REQUIRED)
+find_package(HDF5 REQUIRED)
+
+INCLUDE_DIRECTORIES("/usr/include/libusb-1.0/")
+INCLUDE_DIRECTORIES(
+  ${freenect2_INCLUDE_DIR}  ${PCL_INCLUDE_DIRS} ${FLANN_INCLUDE_DIRS} 
+)
+include_directories(${HDF5_INCLUDE_DIR})
+
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+ADD_EXECUTABLE(build_tree 
+build_tree.cpp
+)
+TARGET_LINK_LIBRARIES(build_tree
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} ${FLANN_LIBRARIES} 
+) 
+
+ADD_EXECUTABLE(nearest_neighbors 
+nearest_neighbors.cpp
+)
+TARGET_LINK_LIBRARIES(nearest_neighbors
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} ${FLANN_LIBRARIES} 
+) 
+
