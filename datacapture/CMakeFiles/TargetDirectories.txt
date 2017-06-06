@@ -1,0 +1,3 @@
+/home/w/Desktop/Workspace/datacapture/CMakeFiles/rebuild_cache.dir
+/home/w/Desktop/Workspace/datacapture/CMakeFiles/edit_cache.dir
+/home/w/Desktop/Workspace/datacapture/CMakeFiles/ptest.dir
