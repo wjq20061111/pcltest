@@ -12,7 +12,7 @@ int main (int argc, char** argv)
 	typedef pcl::PointXYZ PointT;
 	pcl::PointCloud<PointT>::Ptr cloud(new pcl::PointCloud<PointT>);
 
-	pcl::io::loadPCDFile("data_passfil.pcd",*cloud);
+	pcl::io::loadPCDFile("data_deskwithcup_f.pcd",*cloud);
 
 	pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
 	pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
@@ -24,11 +24,8 @@ int main (int argc, char** argv)
 	seg.setModelType (pcl::SACMODEL_PERPENDICULAR_PLANE);
 	seg.setMethodType (pcl::SAC_RANSAC);
 	seg.setDistanceThreshold (0.01);
- // seg.setRadiusLimits (0, 2);
-  // Eigen::Vector3f ax(1,0,0);
-	//Eigen::Vector3f ax = Eigen::Vector3f(0.0,0.0,1.0);
-	//seg.setAxis(ax);
-	//seg.setEpsAngle((3.14)/180*20); 
+	seg.setAxis(Eigen::Vector3f (0.0, 0.0, 1.0));
+	seg.setEpsAngle(3.14/180*10); 
 	seg.setInputCloud (cloud);
 	seg.segment (*inliers, *coefficients);
 

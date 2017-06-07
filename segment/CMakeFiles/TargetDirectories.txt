@@ -1,5 +1,8 @@
 /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/rebuild_cache.dir
 /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/edit_cache.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/min_cut.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/region_growing_rgb_segmentation.dir
+/home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/region_growing_segmentation.dir
 /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/findplane.dir
 /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/extraction.dir
 /home/w/Desktop/Workspace/pcltest/segment/CMakeFiles/cylinder_segmentation.dir

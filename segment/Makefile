@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named min_cut
+
+# Build rule for target.
+min_cut: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 min_cut
+.PHONY : min_cut
+
+# fast build rule for target.
+min_cut/fast:
+	$(MAKE) -f CMakeFiles/min_cut.dir/build.make CMakeFiles/min_cut.dir/build
+.PHONY : min_cut/fast
+
+#=============================================================================
+# Target rules for targets named region_growing_rgb_segmentation
+
+# Build rule for target.
+region_growing_rgb_segmentation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 region_growing_rgb_segmentation
+.PHONY : region_growing_rgb_segmentation
+
+# fast build rule for target.
+region_growing_rgb_segmentation/fast:
+	$(MAKE) -f CMakeFiles/region_growing_rgb_segmentation.dir/build.make CMakeFiles/region_growing_rgb_segmentation.dir/build
+.PHONY : region_growing_rgb_segmentation/fast
+
+#=============================================================================
+# Target rules for targets named region_growing_segmentation
+
+# Build rule for target.
+region_growing_segmentation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 region_growing_segmentation
+.PHONY : region_growing_segmentation
+
+# fast build rule for target.
+region_growing_segmentation/fast:
+	$(MAKE) -f CMakeFiles/region_growing_segmentation.dir/build.make CMakeFiles/region_growing_segmentation.dir/build
+.PHONY : region_growing_segmentation/fast
+
+#=============================================================================
 # Target rules for targets named findplane
 
 # Build rule for target.
@@ -230,6 +269,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/findplane.dir/build.make CMakeFiles/findplane.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+min_cut.o: min_cut.cpp.o
+
+.PHONY : min_cut.o
+
+# target to build an object file
+min_cut.cpp.o:
+	$(MAKE) -f CMakeFiles/min_cut.dir/build.make CMakeFiles/min_cut.dir/min_cut.cpp.o
+.PHONY : min_cut.cpp.o
+
+min_cut.i: min_cut.cpp.i
+
+.PHONY : min_cut.i
+
+# target to preprocess a source file
+min_cut.cpp.i:
+	$(MAKE) -f CMakeFiles/min_cut.dir/build.make CMakeFiles/min_cut.dir/min_cut.cpp.i
+.PHONY : min_cut.cpp.i
+
+min_cut.s: min_cut.cpp.s
+
+.PHONY : min_cut.s
+
+# target to generate assembly for a file
+min_cut.cpp.s:
+	$(MAKE) -f CMakeFiles/min_cut.dir/build.make CMakeFiles/min_cut.dir/min_cut.cpp.s
+.PHONY : min_cut.cpp.s
+
+region_growing_rgb_segmentation.o: region_growing_rgb_segmentation.cpp.o
+
+.PHONY : region_growing_rgb_segmentation.o
+
+# target to build an object file
+region_growing_rgb_segmentation.cpp.o:
+	$(MAKE) -f CMakeFiles/region_growing_rgb_segmentation.dir/build.make CMakeFiles/region_growing_rgb_segmentation.dir/region_growing_rgb_segmentation.cpp.o
+.PHONY : region_growing_rgb_segmentation.cpp.o
+
+region_growing_rgb_segmentation.i: region_growing_rgb_segmentation.cpp.i
+
+.PHONY : region_growing_rgb_segmentation.i
+
+# target to preprocess a source file
+region_growing_rgb_segmentation.cpp.i:
+	$(MAKE) -f CMakeFiles/region_growing_rgb_segmentation.dir/build.make CMakeFiles/region_growing_rgb_segmentation.dir/region_growing_rgb_segmentation.cpp.i
+.PHONY : region_growing_rgb_segmentation.cpp.i
+
+region_growing_rgb_segmentation.s: region_growing_rgb_segmentation.cpp.s
+
+.PHONY : region_growing_rgb_segmentation.s
+
+# target to generate assembly for a file
+region_growing_rgb_segmentation.cpp.s:
+	$(MAKE) -f CMakeFiles/region_growing_rgb_segmentation.dir/build.make CMakeFiles/region_growing_rgb_segmentation.dir/region_growing_rgb_segmentation.cpp.s
+.PHONY : region_growing_rgb_segmentation.cpp.s
+
+region_growing_segmentation.o: region_growing_segmentation.cpp.o
+
+.PHONY : region_growing_segmentation.o
+
+# target to build an object file
+region_growing_segmentation.cpp.o:
+	$(MAKE) -f CMakeFiles/region_growing_segmentation.dir/build.make CMakeFiles/region_growing_segmentation.dir/region_growing_segmentation.cpp.o
+.PHONY : region_growing_segmentation.cpp.o
+
+region_growing_segmentation.i: region_growing_segmentation.cpp.i
+
+.PHONY : region_growing_segmentation.i
+
+# target to preprocess a source file
+region_growing_segmentation.cpp.i:
+	$(MAKE) -f CMakeFiles/region_growing_segmentation.dir/build.make CMakeFiles/region_growing_segmentation.dir/region_growing_segmentation.cpp.i
+.PHONY : region_growing_segmentation.cpp.i
+
+region_growing_segmentation.s: region_growing_segmentation.cpp.s
+
+.PHONY : region_growing_segmentation.s
+
+# target to generate assembly for a file
+region_growing_segmentation.cpp.s:
+	$(MAKE) -f CMakeFiles/region_growing_segmentation.dir/build.make CMakeFiles/region_growing_segmentation.dir/region_growing_segmentation.cpp.s
+.PHONY : region_growing_segmentation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,6 +358,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... min_cut"
+	@echo "... region_growing_rgb_segmentation"
+	@echo "... region_growing_segmentation"
 	@echo "... findplane"
 	@echo "... extraction"
 	@echo "... cylinder_segmentation"
@@ -250,6 +373,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... min_cut.o"
+	@echo "... min_cut.i"
+	@echo "... min_cut.s"
+	@echo "... region_growing_rgb_segmentation.o"
+	@echo "... region_growing_rgb_segmentation.i"
+	@echo "... region_growing_rgb_segmentation.s"
+	@echo "... region_growing_segmentation.o"
+	@echo "... region_growing_segmentation.i"
+	@echo "... region_growing_segmentation.s"
 .PHONY : help
 
 

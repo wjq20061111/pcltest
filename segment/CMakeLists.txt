@@ -37,3 +37,24 @@ ADD_EXECUTABLE(findplane
 TARGET_LINK_LIBRARIES(findplane
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 
+
+ADD_EXECUTABLE(region_growing_segmentation
+  region_growing_segmentation.cpp
+)
+TARGET_LINK_LIBRARIES(region_growing_segmentation
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(region_growing_rgb_segmentation
+  region_growing_rgb_segmentation.cpp
+)
+TARGET_LINK_LIBRARIES(region_growing_rgb_segmentation
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(min_cut
+  min_cut.cpp
+)
+TARGET_LINK_LIBRARIES(min_cut
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
