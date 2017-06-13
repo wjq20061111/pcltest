@@ -14,7 +14,7 @@ int main (int argc, char** argv)
 	pcl::search::Search <PointT>::Ptr tree = boost::shared_ptr<pcl::search::Search<PointT> > (new pcl::search::KdTree<PointT>);
 
 	pcl::PointCloud <PointT>::Ptr cloud (new pcl::PointCloud <PointT>);
-	if ( pcl::io::loadPCDFile <PointT> ("data2.pcd", *cloud) == -1 )
+	if ( pcl::io::loadPCDFile <PointT> ("data2frgb.pcd", *cloud) == -1 )
 	{
 		std::cout << "Cloud reading f./readingailed." << std::endl;
 		return (-1);

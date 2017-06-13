@@ -24,8 +24,8 @@ int main (int argc, char** argv)
 	seg.setModelType (pcl::SACMODEL_PERPENDICULAR_PLANE);
 	seg.setMethodType (pcl::SAC_RANSAC);
 	seg.setDistanceThreshold (0.01);
-	seg.setAxis(Eigen::Vector3f (0.0, 0.0, 1.0));
-	seg.setEpsAngle(3.14/180*10); 
+	seg.setAxis(Eigen::Vector3f (0.0, 1.0, 0.0));
+	seg.setEpsAngle(3.14/180*5); 
 	seg.setInputCloud (cloud);
 	seg.segment (*inliers, *coefficients);
 

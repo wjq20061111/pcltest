@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/w/Desktop/Workspace/pcltest/test/filter.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir/filter.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/test/main.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir/main.cpp.o"
+  "/home/w/Desktop/Workspace/pcltest/test/normal.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir/normal.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/test/segement.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir/segement.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/test/viewer.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir/viewer.cpp.o"
   )

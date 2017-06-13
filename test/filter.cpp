@@ -7,6 +7,7 @@ void threedfilter(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	sor.setInputCloud (cloud);
 	sor.setMeanK (50);
   	sor.setStddevMulThresh (1.0);
+  	sor.setKeepOrganized(true);
   	sor.filter (*cloud_filtered);
 	//pcl::PCDWriter writer;
 	//writer.write<PointT> ("data_passfil.pcd", *cloud_filtered, false); 

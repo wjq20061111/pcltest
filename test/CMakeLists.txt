@@ -18,7 +18,7 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 ADD_EXECUTABLE(pcltest
-  main.cpp viewer.cpp filter.cpp segement.cpp
+  main.cpp viewer.cpp filter.cpp segement.cpp normal.cpp
 )
 TARGET_LINK_LIBRARIES(pcltest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
