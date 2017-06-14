@@ -720,6 +720,8 @@ CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/ren_win_interact_map.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/shapes.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/eigen.h
+CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/histogram_visualizer.h
+CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/histogram_visualizer.hpp
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/pcl_visualizer.hpp
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_color_handlers.hpp
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
@@ -766,6 +768,7 @@ CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkDataSetAttributes.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkDataSetMapper.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkDataSetSurfaceFilter.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkDebugLeaksManager.h
+CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkDoubleArray.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkFieldData.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkFloatArray.h
 CMakeFiles/pcltest.dir/main.cpp.o: /usr/include/vtk-5.8/vtkFollower.h
@@ -1881,6 +1884,8 @@ CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/comm
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/ren_win_interact_map.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/shapes.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/eigen.h
+CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/histogram_visualizer.h
+CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/histogram_visualizer.hpp
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/pcl_visualizer.hpp
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_color_handlers.hpp
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
@@ -1927,6 +1932,7 @@ CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkDataSetAttributes.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkDataSetMapper.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkDataSetSurfaceFilter.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkDebugLeaksManager.h
+CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkDoubleArray.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkFieldData.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkFloatArray.h
 CMakeFiles/pcltest.dir/viewer.cpp.o: /usr/include/vtk-5.8/vtkFollower.h

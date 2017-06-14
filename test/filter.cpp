@@ -14,12 +14,21 @@ void threedfilter(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 }
 
 void passthroughfilter(const pcl::PointCloud<PointT>::Ptr  &cloud , 
-	pcl::PointCloud<PointT>::Ptr  &cloud_filtered)
+	pcl::PointCloud<PointT>::Ptr  &cloud_filtered,
+	char field,
+	float limitdown,
+	float limitup)
 {
 	pcl::PassThrough<PointT> pass;
 	pass.setInputCloud (cloud);
-	pass.setFilterFieldName ("z");
-	pass.setFilterLimits (0.0, 1.5);
+	switch(field)
+	{
+		case 'x' : pass.setFilterFieldName ("x");break;
+		case 'y' : pass.setFilterFieldName ("y");break;
+		case 'z' : pass.setFilterFieldName ("z");break;
+		default : pass.setFilterFieldName ("z");break;
+	}	
+	pass.setFilterLimits (limitdown, limitup);
 	//pass.setFilterLimitsNegative (true);
 	pass.filter (*cloud_filtered);
 }
@@ -36,7 +45,7 @@ void downsamplefilter(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 void extractinliers(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	const pcl::PointIndices::Ptr &inliers , 
 	pcl::PointCloud<PointT>::Ptr  &cloud_filtered,
-	bool flag=false)
+	bool flag)
 {
 	pcl::ExtractIndices<PointT> extract;
 	extract.setInputCloud (cloud);

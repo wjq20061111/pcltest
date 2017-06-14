@@ -14,7 +14,7 @@ int main (int argc, char** argv)
 	pcl::search::Search <PointT>::Ptr tree = boost::shared_ptr<pcl::search::Search<PointT> > (new pcl::search::KdTree<PointT>);
 
 	pcl::PointCloud <PointT>::Ptr cloud (new pcl::PointCloud <PointT>);
-	if ( pcl::io::loadPCDFile <PointT> ("data2frgb.pcd", *cloud) == -1 )
+	if ( pcl::io::loadPCDFile <PointT> ("cloud_trueplane.pcd", *cloud) == -1 )
 	{
 		std::cout << "Cloud reading f./readingailed." << std::endl;
 		return (-1);
@@ -34,7 +34,7 @@ int main (int argc, char** argv)
 	reg.setDistanceThreshold (10);
 	reg.setPointColorThreshold (6);
 	reg.setRegionColorThreshold (5);
-	reg.setMinClusterSize (600);
+	reg.setMinClusterSize (100);
 
 	std::vector <pcl::PointIndices> clusters;
 	reg.extract (clusters);

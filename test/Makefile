@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named capture
+
+# Build rule for target.
+capture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 capture
+.PHONY : capture
+
+# fast build rule for target.
+capture/fast:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
+.PHONY : capture/fast
+
+#=============================================================================
+# Target rules for targets named vfhtest
+
+# Build rule for target.
+vfhtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vfhtest
+.PHONY : vfhtest
+
+# fast build rule for target.
+vfhtest/fast:
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/build
+.PHONY : vfhtest/fast
+
+#=============================================================================
+# Target rules for targets named segtest
+
+# Build rule for target.
+segtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 segtest
+.PHONY : segtest
+
+# fast build rule for target.
+segtest/fast:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/build
+.PHONY : segtest/fast
+
+#=============================================================================
 # Target rules for targets named pcltest
 
 # Build rule for target.
@@ -123,12 +162,72 @@ pcltest/fast:
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/build
 .PHONY : pcltest/fast
 
+VFH.o: VFH.cpp.o
+
+.PHONY : VFH.o
+
+# target to build an object file
+VFH.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/VFH.cpp.o
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/VFH.cpp.o
+.PHONY : VFH.cpp.o
+
+VFH.i: VFH.cpp.i
+
+.PHONY : VFH.i
+
+# target to preprocess a source file
+VFH.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/VFH.cpp.i
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/VFH.cpp.i
+.PHONY : VFH.cpp.i
+
+VFH.s: VFH.cpp.s
+
+.PHONY : VFH.s
+
+# target to generate assembly for a file
+VFH.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/VFH.cpp.s
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/VFH.cpp.s
+.PHONY : VFH.cpp.s
+
+capture.o: capture.cpp.o
+
+.PHONY : capture.o
+
+# target to build an object file
+capture.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.o
+.PHONY : capture.cpp.o
+
+capture.i: capture.cpp.i
+
+.PHONY : capture.i
+
+# target to preprocess a source file
+capture.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.i
+.PHONY : capture.cpp.i
+
+capture.s: capture.cpp.s
+
+.PHONY : capture.s
+
+# target to generate assembly for a file
+capture.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.s
+.PHONY : capture.cpp.s
+
 filter.o: filter.cpp.o
 
 .PHONY : filter.o
 
 # target to build an object file
 filter.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.o
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/filter.cpp.o
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/filter.cpp.o
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/filter.cpp.o
 .PHONY : filter.cpp.o
 
@@ -138,6 +237,9 @@ filter.i: filter.cpp.i
 
 # target to preprocess a source file
 filter.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.i
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/filter.cpp.i
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/filter.cpp.i
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/filter.cpp.i
 .PHONY : filter.cpp.i
 
@@ -147,6 +249,9 @@ filter.s: filter.cpp.s
 
 # target to generate assembly for a file
 filter.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.s
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/filter.cpp.s
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/filter.cpp.s
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/filter.cpp.s
 .PHONY : filter.cpp.s
 
@@ -183,6 +288,9 @@ normal.o: normal.cpp.o
 
 # target to build an object file
 normal.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/normal.cpp.o
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/normal.cpp.o
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/normal.cpp.o
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.o
 .PHONY : normal.cpp.o
 
@@ -192,6 +300,9 @@ normal.i: normal.cpp.i
 
 # target to preprocess a source file
 normal.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/normal.cpp.i
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/normal.cpp.i
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/normal.cpp.i
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.i
 .PHONY : normal.cpp.i
 
@@ -201,6 +312,9 @@ normal.s: normal.cpp.s
 
 # target to generate assembly for a file
 normal.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/normal.cpp.s
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/normal.cpp.s
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/normal.cpp.s
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.s
 .PHONY : normal.cpp.s
 
@@ -210,6 +324,9 @@ segement.o: segement.cpp.o
 
 # target to build an object file
 segement.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/segement.cpp.o
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/segement.cpp.o
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segement.cpp.o
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/segement.cpp.o
 .PHONY : segement.cpp.o
 
@@ -219,6 +336,9 @@ segement.i: segement.cpp.i
 
 # target to preprocess a source file
 segement.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/segement.cpp.i
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/segement.cpp.i
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segement.cpp.i
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/segement.cpp.i
 .PHONY : segement.cpp.i
 
@@ -228,8 +348,65 @@ segement.s: segement.cpp.s
 
 # target to generate assembly for a file
 segement.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/segement.cpp.s
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/segement.cpp.s
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segement.cpp.s
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/segement.cpp.s
 .PHONY : segement.cpp.s
+
+segtest.o: segtest.cpp.o
+
+.PHONY : segtest.o
+
+# target to build an object file
+segtest.cpp.o:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segtest.cpp.o
+.PHONY : segtest.cpp.o
+
+segtest.i: segtest.cpp.i
+
+.PHONY : segtest.i
+
+# target to preprocess a source file
+segtest.cpp.i:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segtest.cpp.i
+.PHONY : segtest.cpp.i
+
+segtest.s: segtest.cpp.s
+
+.PHONY : segtest.s
+
+# target to generate assembly for a file
+segtest.cpp.s:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segtest.cpp.s
+.PHONY : segtest.cpp.s
+
+vfhtest.o: vfhtest.cpp.o
+
+.PHONY : vfhtest.o
+
+# target to build an object file
+vfhtest.cpp.o:
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.o
+.PHONY : vfhtest.cpp.o
+
+vfhtest.i: vfhtest.cpp.i
+
+.PHONY : vfhtest.i
+
+# target to preprocess a source file
+vfhtest.cpp.i:
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.i
+.PHONY : vfhtest.cpp.i
+
+vfhtest.s: vfhtest.cpp.s
+
+.PHONY : vfhtest.s
+
+# target to generate assembly for a file
+vfhtest.cpp.s:
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.s
+.PHONY : vfhtest.cpp.s
 
 viewer.o: viewer.cpp.o
 
@@ -237,6 +414,9 @@ viewer.o: viewer.cpp.o
 
 # target to build an object file
 viewer.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/viewer.cpp.o
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/viewer.cpp.o
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/viewer.cpp.o
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/viewer.cpp.o
 .PHONY : viewer.cpp.o
 
@@ -246,6 +426,9 @@ viewer.i: viewer.cpp.i
 
 # target to preprocess a source file
 viewer.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/viewer.cpp.i
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/viewer.cpp.i
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/viewer.cpp.i
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/viewer.cpp.i
 .PHONY : viewer.cpp.i
 
@@ -255,6 +438,9 @@ viewer.s: viewer.cpp.s
 
 # target to generate assembly for a file
 viewer.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/viewer.cpp.s
+	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/viewer.cpp.s
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/viewer.cpp.s
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/viewer.cpp.s
 .PHONY : viewer.cpp.s
 
@@ -265,8 +451,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... capture"
 	@echo "... edit_cache"
+	@echo "... vfhtest"
+	@echo "... segtest"
 	@echo "... pcltest"
+	@echo "... VFH.o"
+	@echo "... VFH.i"
+	@echo "... VFH.s"
+	@echo "... capture.o"
+	@echo "... capture.i"
+	@echo "... capture.s"
 	@echo "... filter.o"
 	@echo "... filter.i"
 	@echo "... filter.s"
@@ -279,6 +474,12 @@ help:
 	@echo "... segement.o"
 	@echo "... segement.i"
 	@echo "... segement.s"
+	@echo "... segtest.o"
+	@echo "... segtest.i"
+	@echo "... segtest.s"
+	@echo "... vfhtest.o"
+	@echo "... vfhtest.i"
+	@echo "... vfhtest.s"
 	@echo "... viewer.o"
 	@echo "... viewer.i"
 	@echo "... viewer.s"

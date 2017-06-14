@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/datacapture
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named capture
+
+# Build rule for target.
+capture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 capture
+.PHONY : capture
+
+# fast build rule for target.
+capture/fast:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
+.PHONY : capture/fast
+
+#=============================================================================
 # Target rules for targets named ptest
 
 # Build rule for target.
@@ -122,6 +135,60 @@ ptest: cmake_check_build_system
 ptest/fast:
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/build
 .PHONY : ptest/fast
+
+filter.o: filter.cpp.o
+
+.PHONY : filter.o
+
+# target to build an object file
+filter.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.o
+.PHONY : filter.cpp.o
+
+filter.i: filter.cpp.i
+
+.PHONY : filter.i
+
+# target to preprocess a source file
+filter.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.i
+.PHONY : filter.cpp.i
+
+filter.s: filter.cpp.s
+
+.PHONY : filter.s
+
+# target to generate assembly for a file
+filter.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.s
+.PHONY : filter.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 passthrough.o: passthrough.cpp.o
 
@@ -156,9 +223,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... capture"
 	@echo "... ptest"
+	@echo "... filter.o"
+	@echo "... filter.i"
+	@echo "... filter.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... passthrough.o"
 	@echo "... passthrough.i"
 	@echo "... passthrough.s"

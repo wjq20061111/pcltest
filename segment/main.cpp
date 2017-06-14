@@ -12,7 +12,7 @@ int main (int argc, char** argv)
 	typedef pcl::PointXYZ PointT;
 	pcl::PointCloud<PointT>::Ptr cloud(new pcl::PointCloud<PointT>);
 
-	pcl::io::loadPCDFile("data_deskwithcup_f.pcd",*cloud);
+	pcl::io::loadPCDFile("cloud_trueplane.pcd",*cloud);
 
 	pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
 	pcl::PointIndices::Ptr inliers (new pcl::PointIndices);

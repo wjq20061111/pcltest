@@ -721,6 +721,8 @@ CMakeFiles/pcltest.dir/main.cpp.o
  /usr/include/pcl-1.7/pcl/visualization/common/ren_win_interact_map.h
  /usr/include/pcl-1.7/pcl/visualization/common/shapes.h
  /usr/include/pcl-1.7/pcl/visualization/eigen.h
+ /usr/include/pcl-1.7/pcl/visualization/histogram_visualizer.h
+ /usr/include/pcl-1.7/pcl/visualization/impl/histogram_visualizer.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/pcl_visualizer.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_color_handlers.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
@@ -767,6 +769,7 @@ CMakeFiles/pcltest.dir/main.cpp.o
  /usr/include/vtk-5.8/vtkDataSetMapper.h
  /usr/include/vtk-5.8/vtkDataSetSurfaceFilter.h
  /usr/include/vtk-5.8/vtkDebugLeaksManager.h
+ /usr/include/vtk-5.8/vtkDoubleArray.h
  /usr/include/vtk-5.8/vtkFieldData.h
  /usr/include/vtk-5.8/vtkFloatArray.h
  /usr/include/vtk-5.8/vtkFollower.h
@@ -1882,6 +1885,8 @@ CMakeFiles/pcltest.dir/viewer.cpp.o
  /usr/include/pcl-1.7/pcl/visualization/common/ren_win_interact_map.h
  /usr/include/pcl-1.7/pcl/visualization/common/shapes.h
  /usr/include/pcl-1.7/pcl/visualization/eigen.h
+ /usr/include/pcl-1.7/pcl/visualization/histogram_visualizer.h
+ /usr/include/pcl-1.7/pcl/visualization/impl/histogram_visualizer.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/pcl_visualizer.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_color_handlers.hpp
  /usr/include/pcl-1.7/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
@@ -1928,6 +1933,7 @@ CMakeFiles/pcltest.dir/viewer.cpp.o
  /usr/include/vtk-5.8/vtkDataSetMapper.h
  /usr/include/vtk-5.8/vtkDataSetSurfaceFilter.h
  /usr/include/vtk-5.8/vtkDebugLeaksManager.h
+ /usr/include/vtk-5.8/vtkDoubleArray.h
  /usr/include/vtk-5.8/vtkFieldData.h
  /usr/include/vtk-5.8/vtkFloatArray.h
  /usr/include/vtk-5.8/vtkFollower.h

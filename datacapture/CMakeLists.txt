@@ -23,3 +23,10 @@ ADD_EXECUTABLE(ptest
 TARGET_LINK_LIBRARIES(ptest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 
+
+ADD_EXECUTABLE(capture
+  main.cpp filter.cpp
+)
+TARGET_LINK_LIBRARIES(capture
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 

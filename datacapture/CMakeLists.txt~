@@ -18,8 +18,15 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 ADD_EXECUTABLE(ptest
-  cylinder_segmentation.cpp
+  passthrough.cpp
 )
 TARGET_LINK_LIBRARIES(ptest
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(capture
+  main.cpp
+)
+TARGET_LINK_LIBRARIES(capture
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 

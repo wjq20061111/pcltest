@@ -13,7 +13,7 @@ int main (int argc, char** argv)
 {
   typedef pcl::PointXYZ PointT;
   pcl::PointCloud<PointT>::Ptr cloud (new pcl::PointCloud<PointT>);
-  if ( pcl::io::loadPCDFile <PointT> ("ndata2frgb.pcd", *cloud) == -1)
+  if ( pcl::io::loadPCDFile <PointT> ("cloud_trueplane.pcd", *cloud) == -1)
   {
     std::cout << "Cloud reading failed." << std::endl;
     return (-1);

@@ -9,46 +9,32 @@
 
 int main (int argc, char** argv)
 {
-
-
 	pcl::PointCloud<PointT>::Ptr src_cloud (new pcl::PointCloud<PointT>);
 
+	//replace with interface
 	pcl::PCDReader reader;
 	reader.read ("data2.pcd", *src_cloud);
 
 	pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
 	pcl::PointCloud<PointT>::Ptr cloud_passfiltered (new pcl::PointCloud<PointT>);
 	pcl::PointCloud<PointT>::Ptr cloud_samplefiltered (new pcl::PointCloud<PointT>);
+	//VoxelGrid+PassThrough+StatisticalOutlierRemoval
 	downsamplefilter(src_cloud,cloud_samplefiltered);
 	passthroughfilter(cloud_samplefiltered,cloud_passfiltered);
 	threedfilter(cloud_passfiltered,cloud_filtered);
 
-	// pcl::PCDWriter writer;
-	// writer.write<PointT> ("ndata2frgb.pcd",*cloud_filtered);
-	// pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
-	// pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
-	// findplane(cloud_filtered,inliers, coefficients);
-	// if (inliers->indices.size () == 0)
-	// {
-	// 	PCL_ERROR ("Could not estimate a planar model for the given dataset.");
-	// 	return (-1);
-	// }
-
-	//pcl::PointCloud<PointT>::Ptr cloud_plane (new pcl::PointCloud<PointT>);
-	// extractinliers(cloud_filtered,inliers,cloud_plane);
-
+	//segement based on normal
 	std::vector <pcl::PointIndices> clusters;
 	pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud;
 	pcl::PointCloud <pcl::Normal>::Ptr normals (new pcl::PointCloud <pcl::Normal>);
-  	//normalcal(cloud_filtered,normals);
 	RegionGrowingSeg(cloud_filtered, clusters,colored_cloud);
-	pcl::PointCloud<PointT>::Ptr cloud_plane (new pcl::PointCloud<PointT>);
-	pcl::ExtractIndices<PointT> extract;
-	extract.setInputCloud (cloud_filtered);
-	extract.setIndices (    boost::shared_ptr<pcl::PointIndices>(new pcl::PointIndices( clusters[0] ) ) );
-	extract.setNegative (false);
-	extract.filter (*cloud_plane);
 
+	//the biggest cluster is the plane
+	pcl::PointCloud<PointT>::Ptr cloud_plane (new pcl::PointCloud<PointT>);
+	extractinliers(cloud_filtered,
+		boost::shared_ptr<pcl::PointIndices>(new pcl::PointIndices( clusters[0] ) ),
+		cloud_plane);
+	//calculate the plane with ax+by+cz+d=0
 	pcl::ModelCoefficients::Ptr plane_coefficients (new pcl::ModelCoefficients);
 	pcl::PointIndices::Ptr plane_inliers (new pcl::PointIndices);
 	findplane(cloud_plane,plane_inliers, plane_coefficients);
@@ -62,18 +48,11 @@ int main (int argc, char** argv)
 	double plane_d=plane_coefficients->values[3];
 	double plane_dis=-plane_d/plane_b;
 
+	//cut the plane±0.2
 	pcl::PointCloud<PointT>::Ptr cloud_trueplane (new pcl::PointCloud<PointT>);
-	pcl::PassThrough<PointT> pass;
-	pass.setInputCloud (cloud_filtered);
-	pass.setFilterFieldName ("y");
-	pass.setFilterLimits (plane_dis-0.2, plane_dis+0.2);
-	//pass.setFilterLimitsNegative (true);
-	pass.filter (*cloud_trueplane);
+	passthroughfilter(cloud_filtered,cloud_trueplane,'y',plane_dis-0.2,plane_dis+0.2);
 
 	//pclviewer(cloud_trueplane);
-
-	pcl::PCDWriter writer;
-	// 	writer.write<PointT> ("cloud_trueplane.pcd",*cloud_trueplane);
 
 	// Create the segmentation object for the planar model and set all the parameters
 	pcl::SACSegmentation<PointT> seg;
@@ -115,6 +94,8 @@ int main (int argc, char** argv)
 		*cloud_trueplane = *cloud_f;
 	}
 
+//pclviewer(cloud_trueplane);
+
   	// Creating the KdTree object for the search method of the extraction
 	pcl::search::KdTree<PointT>::Ptr tree (new pcl::search::KdTree<PointT>);
 	tree->setInputCloud (cloud_trueplane);
@@ -128,7 +109,7 @@ int main (int argc, char** argv)
 	ec.setInputCloud (cloud_trueplane);
 	ec.extract (cluster_indices);
 
-
+	pcl::PCDWriter writer;
 	pcl::PointCloud<PointT>::Ptr target (new pcl::PointCloud<PointT> ());
 	int j = 0;
 	for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin (); it != cluster_indices.end (); ++it)
@@ -149,20 +130,19 @@ int main (int argc, char** argv)
 	reader.read (ss.str (), *target);
 	}
 
+	//eye candy
+	pcl::visualization::PCLVisualizer viewer ("My example");
 
-		pcl::visualization::PCLVisualizer viewer ("My example");
-
-		viewer.addPointCloud (cloud_filtered,"cloud");
-
-		viewer.addCoordinateSystem (1.0, "cloud", 0);
-		viewer.setBackgroundColor(0.05, 0.05, 0.05, 0); // Setting background to a dark grey
-		viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "cloud");
-		pcl::visualization::PointCloudColorHandlerCustom<PointT> color_handler (target,255,0,0);
-		viewer.addPointCloud (target,color_handler, "target");
-		viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "target");
-		while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
-			viewer.spinOnce ();
-		}
+	viewer.addPointCloud (cloud_filtered,"cloud");
+	viewer.addCoordinateSystem (1.0, "cloud", 0);
+	viewer.setBackgroundColor(0.05, 0.05, 0.05, 0); // Setting background to a dark grey
+	viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "cloud");
+	pcl::visualization::PointCloudColorHandlerCustom<PointT> color_handler (target,255,0,0);
+	viewer.addPointCloud (target,color_handler, "target");
+	viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "target");
+	while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
+		viewer.spinOnce ();
+	}
 
 	return 0;
 }

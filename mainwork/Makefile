@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+normal.o: normal.cpp.o
+
+.PHONY : normal.o
+
+# target to build an object file
+normal.cpp.o:
+	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.o
+.PHONY : normal.cpp.o
+
+normal.i: normal.cpp.i
+
+.PHONY : normal.i
+
+# target to preprocess a source file
+normal.cpp.i:
+	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.i
+.PHONY : normal.cpp.i
+
+normal.s: normal.cpp.s
+
+.PHONY : normal.s
+
+# target to generate assembly for a file
+normal.cpp.s:
+	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.s
+.PHONY : normal.cpp.s
+
 segement.o: segement.cpp.o
 
 .PHONY : segement.o
@@ -246,6 +273,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... normal.o"
+	@echo "... normal.i"
+	@echo "... normal.s"
 	@echo "... segement.o"
 	@echo "... segement.i"
 	@echo "... segement.s"

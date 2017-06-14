@@ -153,6 +153,8 @@ pcl/point_types.h
 -
 pcl/visualization/pcl_visualizer.h
 -
+pcl/visualization/histogram_visualizer.h
+-
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
 
@@ -2910,6 +2912,20 @@ Eigen/Geometry
 Eigen/Dense
 -
 
+/usr/include/pcl-1.7/pcl/visualization/histogram_visualizer.h
+pcl/visualization/interactor_style.h
+-
+pcl/visualization/common/common.h
+-
+pcl/visualization/common/ren_win_interact_map.h
+-
+pcl/visualization/impl/histogram_visualizer.hpp
+-
+
+/usr/include/pcl-1.7/pcl/visualization/impl/histogram_visualizer.hpp
+vtkDoubleArray.h
+-
+
 /usr/include/pcl-1.7/pcl/visualization/impl/pcl_visualizer.hpp
 vtkVersion.h
 -
@@ -3257,6 +3273,12 @@ vtkPolyDataAlgorithm.h
 /usr/include/vtk-5.8/vtkDebugLeaksManager.h
 vtkSystemIncludes.h
 /usr/include/vtk-5.8/vtkSystemIncludes.h
+
+/usr/include/vtk-5.8/vtkDoubleArray.h
+vtkDataArray.h
+/usr/include/vtk-5.8/vtkDataArray.h
+vtkDataArrayTemplate.h
+/usr/include/vtk-5.8/vtkDataArrayTemplate.h
 
 /usr/include/vtk-5.8/vtkFieldData.h
 vtkObject.h

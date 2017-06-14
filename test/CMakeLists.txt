@@ -23,3 +23,24 @@ ADD_EXECUTABLE(pcltest
 TARGET_LINK_LIBRARIES(pcltest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 
+
+ADD_EXECUTABLE(segtest
+  segtest.cpp viewer.cpp filter.cpp segement.cpp normal.cpp
+)
+TARGET_LINK_LIBRARIES(segtest
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(vfhtest
+  vfhtest.cpp viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
+)
+TARGET_LINK_LIBRARIES(vfhtest
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(capture
+  capture.cpp viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
+)
+TARGET_LINK_LIBRARIES(capture
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
