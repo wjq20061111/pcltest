@@ -7,10 +7,10 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/visualization/histogram_visualizer.h>
 
-#include "config.h"
 
 
-void pclviewer(const pcl::PointCloud<PointT>::Ptr  &cloud);
+void pclviewer(const pcl::PointCloud<pcl::PointXYZ>::Ptr  &cloud);
+void rgbpclviewer(const pcl::PointCloud<pcl::PointXYZRGBA>::Ptr  &cloud);
 void VFHviewer(const pcl::PointCloud<pcl::VFHSignature308>::Ptr &vfhs);
 
 #endif // !VIEWER_H

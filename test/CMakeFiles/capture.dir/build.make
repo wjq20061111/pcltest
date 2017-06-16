@@ -81,144 +81,14 @@ CMakeFiles/capture.dir/capture.cpp.o.provides: CMakeFiles/capture.dir/capture.cp
 CMakeFiles/capture.dir/capture.cpp.o.provides.build: CMakeFiles/capture.dir/capture.cpp.o
 
 
-CMakeFiles/capture.dir/viewer.cpp.o: CMakeFiles/capture.dir/flags.make
-CMakeFiles/capture.dir/viewer.cpp.o: viewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/capture.dir/viewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/capture.dir/viewer.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/viewer.cpp
-
-CMakeFiles/capture.dir/viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/capture.dir/viewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/viewer.cpp > CMakeFiles/capture.dir/viewer.cpp.i
-
-CMakeFiles/capture.dir/viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/capture.dir/viewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/viewer.cpp -o CMakeFiles/capture.dir/viewer.cpp.s
-
-CMakeFiles/capture.dir/viewer.cpp.o.requires:
-
-.PHONY : CMakeFiles/capture.dir/viewer.cpp.o.requires
-
-CMakeFiles/capture.dir/viewer.cpp.o.provides: CMakeFiles/capture.dir/viewer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/viewer.cpp.o.provides.build
-.PHONY : CMakeFiles/capture.dir/viewer.cpp.o.provides
-
-CMakeFiles/capture.dir/viewer.cpp.o.provides.build: CMakeFiles/capture.dir/viewer.cpp.o
-
-
-CMakeFiles/capture.dir/filter.cpp.o: CMakeFiles/capture.dir/flags.make
-CMakeFiles/capture.dir/filter.cpp.o: filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/capture.dir/filter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/capture.dir/filter.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/filter.cpp
-
-CMakeFiles/capture.dir/filter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/capture.dir/filter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/filter.cpp > CMakeFiles/capture.dir/filter.cpp.i
-
-CMakeFiles/capture.dir/filter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/capture.dir/filter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/filter.cpp -o CMakeFiles/capture.dir/filter.cpp.s
-
-CMakeFiles/capture.dir/filter.cpp.o.requires:
-
-.PHONY : CMakeFiles/capture.dir/filter.cpp.o.requires
-
-CMakeFiles/capture.dir/filter.cpp.o.provides: CMakeFiles/capture.dir/filter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.o.provides.build
-.PHONY : CMakeFiles/capture.dir/filter.cpp.o.provides
-
-CMakeFiles/capture.dir/filter.cpp.o.provides.build: CMakeFiles/capture.dir/filter.cpp.o
-
-
-CMakeFiles/capture.dir/segement.cpp.o: CMakeFiles/capture.dir/flags.make
-CMakeFiles/capture.dir/segement.cpp.o: segement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/capture.dir/segement.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/capture.dir/segement.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/segement.cpp
-
-CMakeFiles/capture.dir/segement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/capture.dir/segement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/segement.cpp > CMakeFiles/capture.dir/segement.cpp.i
-
-CMakeFiles/capture.dir/segement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/capture.dir/segement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/segement.cpp -o CMakeFiles/capture.dir/segement.cpp.s
-
-CMakeFiles/capture.dir/segement.cpp.o.requires:
-
-.PHONY : CMakeFiles/capture.dir/segement.cpp.o.requires
-
-CMakeFiles/capture.dir/segement.cpp.o.provides: CMakeFiles/capture.dir/segement.cpp.o.requires
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/segement.cpp.o.provides.build
-.PHONY : CMakeFiles/capture.dir/segement.cpp.o.provides
-
-CMakeFiles/capture.dir/segement.cpp.o.provides.build: CMakeFiles/capture.dir/segement.cpp.o
-
-
-CMakeFiles/capture.dir/normal.cpp.o: CMakeFiles/capture.dir/flags.make
-CMakeFiles/capture.dir/normal.cpp.o: normal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/capture.dir/normal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/capture.dir/normal.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/normal.cpp
-
-CMakeFiles/capture.dir/normal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/capture.dir/normal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/normal.cpp > CMakeFiles/capture.dir/normal.cpp.i
-
-CMakeFiles/capture.dir/normal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/capture.dir/normal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/normal.cpp -o CMakeFiles/capture.dir/normal.cpp.s
-
-CMakeFiles/capture.dir/normal.cpp.o.requires:
-
-.PHONY : CMakeFiles/capture.dir/normal.cpp.o.requires
-
-CMakeFiles/capture.dir/normal.cpp.o.provides: CMakeFiles/capture.dir/normal.cpp.o.requires
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/normal.cpp.o.provides.build
-.PHONY : CMakeFiles/capture.dir/normal.cpp.o.provides
-
-CMakeFiles/capture.dir/normal.cpp.o.provides.build: CMakeFiles/capture.dir/normal.cpp.o
-
-
-CMakeFiles/capture.dir/VFH.cpp.o: CMakeFiles/capture.dir/flags.make
-CMakeFiles/capture.dir/VFH.cpp.o: VFH.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/capture.dir/VFH.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/capture.dir/VFH.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/VFH.cpp
-
-CMakeFiles/capture.dir/VFH.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/capture.dir/VFH.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/VFH.cpp > CMakeFiles/capture.dir/VFH.cpp.i
-
-CMakeFiles/capture.dir/VFH.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/capture.dir/VFH.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/VFH.cpp -o CMakeFiles/capture.dir/VFH.cpp.s
-
-CMakeFiles/capture.dir/VFH.cpp.o.requires:
-
-.PHONY : CMakeFiles/capture.dir/VFH.cpp.o.requires
-
-CMakeFiles/capture.dir/VFH.cpp.o.provides: CMakeFiles/capture.dir/VFH.cpp.o.requires
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/VFH.cpp.o.provides.build
-.PHONY : CMakeFiles/capture.dir/VFH.cpp.o.provides
-
-CMakeFiles/capture.dir/VFH.cpp.o.provides.build: CMakeFiles/capture.dir/VFH.cpp.o
-
-
 # Object files for target capture
 capture_OBJECTS = \
-"CMakeFiles/capture.dir/capture.cpp.o" \
-"CMakeFiles/capture.dir/viewer.cpp.o" \
-"CMakeFiles/capture.dir/filter.cpp.o" \
-"CMakeFiles/capture.dir/segement.cpp.o" \
-"CMakeFiles/capture.dir/normal.cpp.o" \
-"CMakeFiles/capture.dir/VFH.cpp.o"
+"CMakeFiles/capture.dir/capture.cpp.o"
 
 # External object files for target capture
 capture_EXTERNAL_OBJECTS =
 
 capture: CMakeFiles/capture.dir/capture.cpp.o
-capture: CMakeFiles/capture.dir/viewer.cpp.o
-capture: CMakeFiles/capture.dir/filter.cpp.o
-capture: CMakeFiles/capture.dir/segement.cpp.o
-capture: CMakeFiles/capture.dir/normal.cpp.o
-capture: CMakeFiles/capture.dir/VFH.cpp.o
 capture: CMakeFiles/capture.dir/build.make
 capture: /home/w/freenect2/lib/libfreenect2.so
 capture: /usr/local/lib/libopencv_videostab.so.2.4.13
@@ -273,6 +143,7 @@ capture: /usr/local/lib/libflann_cpp_s.a
 capture: /usr/lib/libvtkGenericFiltering.so.5.8.0
 capture: /usr/lib/libvtkGeovis.so.5.8.0
 capture: /usr/lib/libvtkCharts.so.5.8.0
+capture: liblibmypcl.a
 capture: /usr/lib/libpcl_common.so
 capture: /usr/lib/libpcl_kdtree.so
 capture: /usr/lib/libpcl_octree.so
@@ -319,7 +190,7 @@ capture: /usr/lib/libvtkFiltering.so.5.8.0
 capture: /usr/lib/libvtkCommon.so.5.8.0
 capture: /usr/lib/libvtksys.so.5.8.0
 capture: CMakeFiles/capture.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable capture"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable capture"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/capture.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -328,11 +199,6 @@ CMakeFiles/capture.dir/build: capture
 .PHONY : CMakeFiles/capture.dir/build
 
 CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/capture.cpp.o.requires
-CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/viewer.cpp.o.requires
-CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/filter.cpp.o.requires
-CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/segement.cpp.o.requires
-CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/normal.cpp.o.requires
-CMakeFiles/capture.dir/requires: CMakeFiles/capture.dir/VFH.cpp.o.requires
 
 .PHONY : CMakeFiles/capture.dir/requires
 

@@ -8,10 +8,6 @@
 
 /home/w/Desktop/Workspace/pcltest/test/config.h
 
-/home/w/Desktop/Workspace/pcltest/test/filter.cpp
-filter.h
-/home/w/Desktop/Workspace/pcltest/test/filter.h
-
 /home/w/Desktop/Workspace/pcltest/test/filter.h
 pcl/io/pcd_io.h
 -
@@ -32,10 +28,6 @@ pcl/filters/extract_indices.h
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
 
-/home/w/Desktop/Workspace/pcltest/test/normal.cpp
-normal.h
-/home/w/Desktop/Workspace/pcltest/test/normal.h
-
 /home/w/Desktop/Workspace/pcltest/test/normal.h
 pcl/io/pcd_io.h
 -
@@ -53,10 +45,6 @@ pcl/features/normal_3d.h
 -
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
-
-/home/w/Desktop/Workspace/pcltest/test/segement.cpp
-segement.h
-/home/w/Desktop/Workspace/pcltest/test/segement.h
 
 /home/w/Desktop/Workspace/pcltest/test/segement.h
 vector
@@ -95,18 +83,18 @@ normal.h
 /home/w/Desktop/Workspace/pcltest/test/normal.h
 
 /home/w/Desktop/Workspace/pcltest/test/segtest.cpp
+iostream
+-
+sstream
+-
+filter.h
+/home/w/Desktop/Workspace/pcltest/test/filter.h
 segement.h
 /home/w/Desktop/Workspace/pcltest/test/segement.h
 viewer.h
 /home/w/Desktop/Workspace/pcltest/test/viewer.h
-filter.h
-/home/w/Desktop/Workspace/pcltest/test/filter.h
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
-
-/home/w/Desktop/Workspace/pcltest/test/viewer.cpp
-viewer.h
-/home/w/Desktop/Workspace/pcltest/test/viewer.h
 
 /home/w/Desktop/Workspace/pcltest/test/viewer.h
 pcl/io/pcd_io.h

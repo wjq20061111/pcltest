@@ -1,20 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e2255/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e2255.dir/build.make CMakeFiles/cmTC_e2255.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_93364/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93364.dir/build.make CMakeFiles/cmTC_93364.dir/build
 make[1]: 正在进入目录 `/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e2255.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_e2255.dir/CheckSymbolExists.c.o   -c /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_e2255
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2255.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e2255.dir/CheckSymbolExists.c.o  -o cmTC_e2255 
-CMakeFiles/cmTC_e2255.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Building C object CMakeFiles/cmTC_93364.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_93364.dir/CheckSymbolExists.c.o   -c /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_93364
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93364.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_93364.dir/CheckSymbolExists.c.o  -o cmTC_93364 
+CMakeFiles/cmTC_93364.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_e2255] 错误 1
+make[1]: *** [cmTC_93364] 错误 1
 make[1]:正在离开目录 `/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp'
-make: *** [cmTC_e2255/fast] 错误 2
+make: *** [cmTC_93364/fast] 错误 2
 
 File /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -34,18 +34,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_95404/fast"
-/usr/bin/make -f CMakeFiles/cmTC_95404.dir/build.make CMakeFiles/cmTC_95404.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_de62c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de62c.dir/build.make CMakeFiles/cmTC_de62c.dir/build
 make[1]: 正在进入目录 `/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_95404.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_95404.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.8/Modules/CheckFunctionExists.c
-Linking C executable cmTC_95404
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95404.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_95404.dir/CheckFunctionExists.c.o  -o cmTC_95404 -lpthreads 
+Building C object CMakeFiles/cmTC_de62c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_de62c.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_de62c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de62c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_de62c.dir/CheckFunctionExists.c.o  -o cmTC_de62c -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_95404] 错误 1
+make[1]: *** [cmTC_de62c] 错误 1
 make[1]:正在离开目录 `/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/CMakeTmp'
-make: *** [cmTC_95404/fast] 错误 2
+make: *** [cmTC_de62c/fast] 错误 2
 
 

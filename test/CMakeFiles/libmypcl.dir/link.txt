@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibmypcl.a  CMakeFiles/libmypcl.dir/viewer.cpp.o CMakeFiles/libmypcl.dir/filter.cpp.o CMakeFiles/libmypcl.dir/segement.cpp.o CMakeFiles/libmypcl.dir/normal.cpp.o CMakeFiles/libmypcl.dir/VFH.cpp.o
+/usr/bin/ranlib liblibmypcl.a

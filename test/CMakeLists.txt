@@ -17,30 +17,41 @@ INCLUDE_DIRECTORIES(
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+add_library(libmypcl
+viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
+)
+
 ADD_EXECUTABLE(pcltest
-  main.cpp viewer.cpp filter.cpp segement.cpp normal.cpp
+  main.cpp 
 )
 TARGET_LINK_LIBRARIES(pcltest
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 ) 
 
 ADD_EXECUTABLE(segtest
-  segtest.cpp viewer.cpp filter.cpp segement.cpp normal.cpp
+  segtest.cpp #viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
 )
 TARGET_LINK_LIBRARIES(segtest
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 ) 
 
 ADD_EXECUTABLE(vfhtest
-  vfhtest.cpp viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
+  vfhtest.cpp #viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
 )
-TARGET_LINK_LIBRARIES(vfhtest
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+TARGET_LINK_LIBRARIES(vfhtest 
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 ) 
 
 ADD_EXECUTABLE(capture
-  capture.cpp viewer.cpp filter.cpp segement.cpp normal.cpp VFH.cpp
+  capture.cpp 
 )
 TARGET_LINK_LIBRARIES(capture
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
+) 
+
+ADD_EXECUTABLE(viewtest
+  viewtest.cpp
+)
+TARGET_LINK_LIBRARIES(viewtest
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 ) 

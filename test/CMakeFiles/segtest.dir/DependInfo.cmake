@@ -4,11 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/w/Desktop/Workspace/pcltest/test/filter.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/filter.cpp.o"
-  "/home/w/Desktop/Workspace/pcltest/test/normal.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/normal.cpp.o"
-  "/home/w/Desktop/Workspace/pcltest/test/segement.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/segement.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/test/segtest.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/segtest.cpp.o"
-  "/home/w/Desktop/Workspace/pcltest/test/viewer.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/viewer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -37,6 +33,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/libmypcl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

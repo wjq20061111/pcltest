@@ -1,10 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/capture.dir/capture.cpp.o"
-  "CMakeFiles/capture.dir/viewer.cpp.o"
-  "CMakeFiles/capture.dir/filter.cpp.o"
-  "CMakeFiles/capture.dir/segement.cpp.o"
-  "CMakeFiles/capture.dir/normal.cpp.o"
-  "CMakeFiles/capture.dir/VFH.cpp.o"
   "capture.pdb"
   "capture"
 )

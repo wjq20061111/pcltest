@@ -470,6 +470,9 @@ freenect2_INCLUDE_DIR:PATH=/home/w/freenect2/include
 //Path to a library.
 freenect2_LIBRARY:FILEPATH=/home/w/freenect2/lib/libfreenect2.so
 
+//Dependencies for target
+libmypcl_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

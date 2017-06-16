@@ -11,7 +11,7 @@ void pclviewer(const pcl::PointCloud<PointT>::Ptr  &cloud)
 
 		while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed
 			viewer.spinOnce (100);
-			boost::this_thread::sleep (boost::posix_time::microseconds (100000));
+			//boost::this_thread::sleep (boost::posix_time::microseconds (100000));
 		}
 }
 
@@ -20,4 +20,13 @@ void VFHviewer(const pcl::PointCloud<pcl::VFHSignature308>::Ptr &vfhs)
 	pcl::visualization::PCLHistogramVisualizer hv;
 	hv.addFeatureHistogram(*vfhs,308);
 	hv.spin();
+}
+
+void calViewerXY(int k,double (&step)[2])
+{
+	int y_s = (int)floor (sqrt ((double)k));
+  	int x_s = y_s + (int)ceil ((k / (double)y_s) - y_s);
+  	double x_step = (double)(1 / (double)x_s);
+  	double y_step = (double)(1 / (double)y_s);
+  	step[0]=x_step; step[1]=y_step;
 }

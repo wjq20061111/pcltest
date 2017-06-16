@@ -81,118 +81,14 @@ CMakeFiles/segtest.dir/segtest.cpp.o.provides: CMakeFiles/segtest.dir/segtest.cp
 CMakeFiles/segtest.dir/segtest.cpp.o.provides.build: CMakeFiles/segtest.dir/segtest.cpp.o
 
 
-CMakeFiles/segtest.dir/viewer.cpp.o: CMakeFiles/segtest.dir/flags.make
-CMakeFiles/segtest.dir/viewer.cpp.o: viewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/segtest.dir/viewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/segtest.dir/viewer.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/viewer.cpp
-
-CMakeFiles/segtest.dir/viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/segtest.dir/viewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/viewer.cpp > CMakeFiles/segtest.dir/viewer.cpp.i
-
-CMakeFiles/segtest.dir/viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/segtest.dir/viewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/viewer.cpp -o CMakeFiles/segtest.dir/viewer.cpp.s
-
-CMakeFiles/segtest.dir/viewer.cpp.o.requires:
-
-.PHONY : CMakeFiles/segtest.dir/viewer.cpp.o.requires
-
-CMakeFiles/segtest.dir/viewer.cpp.o.provides: CMakeFiles/segtest.dir/viewer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/viewer.cpp.o.provides.build
-.PHONY : CMakeFiles/segtest.dir/viewer.cpp.o.provides
-
-CMakeFiles/segtest.dir/viewer.cpp.o.provides.build: CMakeFiles/segtest.dir/viewer.cpp.o
-
-
-CMakeFiles/segtest.dir/filter.cpp.o: CMakeFiles/segtest.dir/flags.make
-CMakeFiles/segtest.dir/filter.cpp.o: filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/segtest.dir/filter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/segtest.dir/filter.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/filter.cpp
-
-CMakeFiles/segtest.dir/filter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/segtest.dir/filter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/filter.cpp > CMakeFiles/segtest.dir/filter.cpp.i
-
-CMakeFiles/segtest.dir/filter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/segtest.dir/filter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/filter.cpp -o CMakeFiles/segtest.dir/filter.cpp.s
-
-CMakeFiles/segtest.dir/filter.cpp.o.requires:
-
-.PHONY : CMakeFiles/segtest.dir/filter.cpp.o.requires
-
-CMakeFiles/segtest.dir/filter.cpp.o.provides: CMakeFiles/segtest.dir/filter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/filter.cpp.o.provides.build
-.PHONY : CMakeFiles/segtest.dir/filter.cpp.o.provides
-
-CMakeFiles/segtest.dir/filter.cpp.o.provides.build: CMakeFiles/segtest.dir/filter.cpp.o
-
-
-CMakeFiles/segtest.dir/segement.cpp.o: CMakeFiles/segtest.dir/flags.make
-CMakeFiles/segtest.dir/segement.cpp.o: segement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/segtest.dir/segement.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/segtest.dir/segement.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/segement.cpp
-
-CMakeFiles/segtest.dir/segement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/segtest.dir/segement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/segement.cpp > CMakeFiles/segtest.dir/segement.cpp.i
-
-CMakeFiles/segtest.dir/segement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/segtest.dir/segement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/segement.cpp -o CMakeFiles/segtest.dir/segement.cpp.s
-
-CMakeFiles/segtest.dir/segement.cpp.o.requires:
-
-.PHONY : CMakeFiles/segtest.dir/segement.cpp.o.requires
-
-CMakeFiles/segtest.dir/segement.cpp.o.provides: CMakeFiles/segtest.dir/segement.cpp.o.requires
-	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segement.cpp.o.provides.build
-.PHONY : CMakeFiles/segtest.dir/segement.cpp.o.provides
-
-CMakeFiles/segtest.dir/segement.cpp.o.provides.build: CMakeFiles/segtest.dir/segement.cpp.o
-
-
-CMakeFiles/segtest.dir/normal.cpp.o: CMakeFiles/segtest.dir/flags.make
-CMakeFiles/segtest.dir/normal.cpp.o: normal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/segtest.dir/normal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/segtest.dir/normal.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/normal.cpp
-
-CMakeFiles/segtest.dir/normal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/segtest.dir/normal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/normal.cpp > CMakeFiles/segtest.dir/normal.cpp.i
-
-CMakeFiles/segtest.dir/normal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/segtest.dir/normal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/normal.cpp -o CMakeFiles/segtest.dir/normal.cpp.s
-
-CMakeFiles/segtest.dir/normal.cpp.o.requires:
-
-.PHONY : CMakeFiles/segtest.dir/normal.cpp.o.requires
-
-CMakeFiles/segtest.dir/normal.cpp.o.provides: CMakeFiles/segtest.dir/normal.cpp.o.requires
-	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/normal.cpp.o.provides.build
-.PHONY : CMakeFiles/segtest.dir/normal.cpp.o.provides
-
-CMakeFiles/segtest.dir/normal.cpp.o.provides.build: CMakeFiles/segtest.dir/normal.cpp.o
-
-
 # Object files for target segtest
 segtest_OBJECTS = \
-"CMakeFiles/segtest.dir/segtest.cpp.o" \
-"CMakeFiles/segtest.dir/viewer.cpp.o" \
-"CMakeFiles/segtest.dir/filter.cpp.o" \
-"CMakeFiles/segtest.dir/segement.cpp.o" \
-"CMakeFiles/segtest.dir/normal.cpp.o"
+"CMakeFiles/segtest.dir/segtest.cpp.o"
 
 # External object files for target segtest
 segtest_EXTERNAL_OBJECTS =
 
 segtest: CMakeFiles/segtest.dir/segtest.cpp.o
-segtest: CMakeFiles/segtest.dir/viewer.cpp.o
-segtest: CMakeFiles/segtest.dir/filter.cpp.o
-segtest: CMakeFiles/segtest.dir/segement.cpp.o
-segtest: CMakeFiles/segtest.dir/normal.cpp.o
 segtest: CMakeFiles/segtest.dir/build.make
 segtest: /home/w/freenect2/lib/libfreenect2.so
 segtest: /usr/local/lib/libopencv_videostab.so.2.4.13
@@ -247,6 +143,7 @@ segtest: /usr/local/lib/libflann_cpp_s.a
 segtest: /usr/lib/libvtkGenericFiltering.so.5.8.0
 segtest: /usr/lib/libvtkGeovis.so.5.8.0
 segtest: /usr/lib/libvtkCharts.so.5.8.0
+segtest: liblibmypcl.a
 segtest: /usr/lib/libpcl_common.so
 segtest: /usr/lib/libpcl_kdtree.so
 segtest: /usr/lib/libpcl_octree.so
@@ -293,7 +190,7 @@ segtest: /usr/lib/libvtkFiltering.so.5.8.0
 segtest: /usr/lib/libvtkCommon.so.5.8.0
 segtest: /usr/lib/libvtksys.so.5.8.0
 segtest: CMakeFiles/segtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable segtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable segtest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/segtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -302,10 +199,6 @@ CMakeFiles/segtest.dir/build: segtest
 .PHONY : CMakeFiles/segtest.dir/build
 
 CMakeFiles/segtest.dir/requires: CMakeFiles/segtest.dir/segtest.cpp.o.requires
-CMakeFiles/segtest.dir/requires: CMakeFiles/segtest.dir/viewer.cpp.o.requires
-CMakeFiles/segtest.dir/requires: CMakeFiles/segtest.dir/filter.cpp.o.requires
-CMakeFiles/segtest.dir/requires: CMakeFiles/segtest.dir/segement.cpp.o.requires
-CMakeFiles/segtest.dir/requires: CMakeFiles/segtest.dir/normal.cpp.o.requires
 
 .PHONY : CMakeFiles/segtest.dir/requires
 

@@ -69,8 +69,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/viewtest.dir/DependInfo.cmake"
   "CMakeFiles/capture.dir/DependInfo.cmake"
   "CMakeFiles/vfhtest.dir/DependInfo.cmake"
   "CMakeFiles/segtest.dir/DependInfo.cmake"
   "CMakeFiles/pcltest.dir/DependInfo.cmake"
+  "CMakeFiles/libmypcl.dir/DependInfo.cmake"
   )

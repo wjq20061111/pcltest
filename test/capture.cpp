@@ -150,21 +150,20 @@ int main (int argc, char** argv)
 			float point3d[3];
 			float bgr;
 			registration->getPointXYZRGB(&undistorted,&registered,r,c,point3d[0],point3d[1],point3d[2],bgr);
-			p.x = point3d[0];
-			p.y = point3d[1];
-			p.z = point3d[2];
+			p.x = point3d[0]; p.y = point3d[1]; p.z = point3d[2];
 			uint8_t *colorp = reinterpret_cast<uint8_t*>(&bgr);
-			p.b = colorp[0];
-			p.g = colorp[1];
-			p.r = colorp[2];
+			p.b = colorp[0];	p.g = colorp[1];	p.r = colorp[2];
 			src_cloud->push_back(p);
 			}
 		}
 
 		pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
 		pcl::PointCloud<PointT>::Ptr cloud_passfiltered (new pcl::PointCloud<PointT>);
-		passthroughfilter(src_cloud,cloud_passfiltered);
+		passthroughfilter(src_cloud,cloud_passfiltered,'y',-0.2,0.2);
+		passthroughfilter(cloud_passfiltered,cloud_passfiltered,'z',0,1.2);
 		threedfilter(cloud_passfiltered,cloud_filtered);
+
+
 
 		if(framecount==0)
 		{
@@ -209,7 +208,7 @@ void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event,
 	)
 {
 	if(event.getKeySym() == "space" && event.keyDown()){
-		std::cout<<"get space key"<<std::endl;
+		//std::cout<<"get space key"<<std::endl;
 		if(captureflag==0)
 			captureflag=1;
 	}

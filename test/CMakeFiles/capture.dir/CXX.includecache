@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/w/Desktop/Workspace/pcltest/test/VFH.cpp
-VFH.h
-/home/w/Desktop/Workspace/pcltest/test/VFH.h
-
 /home/w/Desktop/Workspace/pcltest/test/VFH.h
 pcl/point_cloud.h
 -
@@ -78,10 +74,6 @@ pcl/common/transforms.h
 
 /home/w/Desktop/Workspace/pcltest/test/config.h
 
-/home/w/Desktop/Workspace/pcltest/test/filter.cpp
-filter.h
-/home/w/Desktop/Workspace/pcltest/test/filter.h
-
 /home/w/Desktop/Workspace/pcltest/test/filter.h
 pcl/io/pcd_io.h
 -
@@ -102,10 +94,6 @@ pcl/filters/extract_indices.h
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
 
-/home/w/Desktop/Workspace/pcltest/test/normal.cpp
-normal.h
-/home/w/Desktop/Workspace/pcltest/test/normal.h
-
 /home/w/Desktop/Workspace/pcltest/test/normal.h
 pcl/io/pcd_io.h
 -
@@ -123,10 +111,6 @@ pcl/features/normal_3d.h
 -
 config.h
 /home/w/Desktop/Workspace/pcltest/test/config.h
-
-/home/w/Desktop/Workspace/pcltest/test/segement.cpp
-segement.h
-/home/w/Desktop/Workspace/pcltest/test/segement.h
 
 /home/w/Desktop/Workspace/pcltest/test/segement.h
 vector
@@ -163,10 +147,6 @@ filter.h
 /home/w/Desktop/Workspace/pcltest/test/filter.h
 normal.h
 /home/w/Desktop/Workspace/pcltest/test/normal.h
-
-/home/w/Desktop/Workspace/pcltest/test/viewer.cpp
-viewer.h
-/home/w/Desktop/Workspace/pcltest/test/viewer.h
 
 /home/w/Desktop/Workspace/pcltest/test/viewer.h
 pcl/io/pcd_io.h

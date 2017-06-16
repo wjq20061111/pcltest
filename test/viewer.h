@@ -12,5 +12,5 @@
 
 void pclviewer(const pcl::PointCloud<PointT>::Ptr  &cloud);
 void VFHviewer(const pcl::PointCloud<pcl::VFHSignature308>::Ptr &vfhs);
-
+void calViewerXY(int k,double (&step)[2]);
 #endif // !VIEWER_H

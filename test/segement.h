@@ -24,5 +24,6 @@ void findplane(const pcl::PointCloud<PointT>::Ptr  &cloud ,pcl::PointIndices::Pt
 void ECExtraction(const pcl::PointCloud<PointT>::Ptr  &cloud_filtered , std::vector<pcl::PointIndices> &cluster_indices);
 void RegionGrowingSeg(const pcl::PointCloud<PointT>::Ptr  &cloud , std::vector <pcl::PointIndices> &clusters,pcl::PointCloud <pcl::PointXYZRGB>::Ptr &colored_cloud);
 void RegionGrowingRGBSeg(const pcl::PointCloud<PointT>::Ptr  &cloud , std::vector <pcl::PointIndices> &clusters,pcl::PointCloud <pcl::PointXYZRGB>::Ptr &colored_cloud);
+void calEuclideanClusterExtraction(const pcl::PointCloud<PointT>::Ptr  &cloud , std::vector <pcl::PointIndices> &cluster_indices);
 
 #endif // !SEGEMENT_H

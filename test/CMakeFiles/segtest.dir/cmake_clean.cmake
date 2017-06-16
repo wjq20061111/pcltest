@@ -1,9 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/segtest.dir/segtest.cpp.o"
-  "CMakeFiles/segtest.dir/viewer.cpp.o"
-  "CMakeFiles/segtest.dir/filter.cpp.o"
-  "CMakeFiles/segtest.dir/segement.cpp.o"
-  "CMakeFiles/segtest.dir/normal.cpp.o"
   "segtest.pdb"
   "segtest"
 )

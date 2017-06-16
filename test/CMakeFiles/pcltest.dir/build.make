@@ -81,118 +81,14 @@ CMakeFiles/pcltest.dir/main.cpp.o.provides: CMakeFiles/pcltest.dir/main.cpp.o.re
 CMakeFiles/pcltest.dir/main.cpp.o.provides.build: CMakeFiles/pcltest.dir/main.cpp.o
 
 
-CMakeFiles/pcltest.dir/viewer.cpp.o: CMakeFiles/pcltest.dir/flags.make
-CMakeFiles/pcltest.dir/viewer.cpp.o: viewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pcltest.dir/viewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcltest.dir/viewer.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/viewer.cpp
-
-CMakeFiles/pcltest.dir/viewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcltest.dir/viewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/viewer.cpp > CMakeFiles/pcltest.dir/viewer.cpp.i
-
-CMakeFiles/pcltest.dir/viewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcltest.dir/viewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/viewer.cpp -o CMakeFiles/pcltest.dir/viewer.cpp.s
-
-CMakeFiles/pcltest.dir/viewer.cpp.o.requires:
-
-.PHONY : CMakeFiles/pcltest.dir/viewer.cpp.o.requires
-
-CMakeFiles/pcltest.dir/viewer.cpp.o.provides: CMakeFiles/pcltest.dir/viewer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/viewer.cpp.o.provides.build
-.PHONY : CMakeFiles/pcltest.dir/viewer.cpp.o.provides
-
-CMakeFiles/pcltest.dir/viewer.cpp.o.provides.build: CMakeFiles/pcltest.dir/viewer.cpp.o
-
-
-CMakeFiles/pcltest.dir/filter.cpp.o: CMakeFiles/pcltest.dir/flags.make
-CMakeFiles/pcltest.dir/filter.cpp.o: filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pcltest.dir/filter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcltest.dir/filter.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/filter.cpp
-
-CMakeFiles/pcltest.dir/filter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcltest.dir/filter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/filter.cpp > CMakeFiles/pcltest.dir/filter.cpp.i
-
-CMakeFiles/pcltest.dir/filter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcltest.dir/filter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/filter.cpp -o CMakeFiles/pcltest.dir/filter.cpp.s
-
-CMakeFiles/pcltest.dir/filter.cpp.o.requires:
-
-.PHONY : CMakeFiles/pcltest.dir/filter.cpp.o.requires
-
-CMakeFiles/pcltest.dir/filter.cpp.o.provides: CMakeFiles/pcltest.dir/filter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/filter.cpp.o.provides.build
-.PHONY : CMakeFiles/pcltest.dir/filter.cpp.o.provides
-
-CMakeFiles/pcltest.dir/filter.cpp.o.provides.build: CMakeFiles/pcltest.dir/filter.cpp.o
-
-
-CMakeFiles/pcltest.dir/segement.cpp.o: CMakeFiles/pcltest.dir/flags.make
-CMakeFiles/pcltest.dir/segement.cpp.o: segement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pcltest.dir/segement.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcltest.dir/segement.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/segement.cpp
-
-CMakeFiles/pcltest.dir/segement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcltest.dir/segement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/segement.cpp > CMakeFiles/pcltest.dir/segement.cpp.i
-
-CMakeFiles/pcltest.dir/segement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcltest.dir/segement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/segement.cpp -o CMakeFiles/pcltest.dir/segement.cpp.s
-
-CMakeFiles/pcltest.dir/segement.cpp.o.requires:
-
-.PHONY : CMakeFiles/pcltest.dir/segement.cpp.o.requires
-
-CMakeFiles/pcltest.dir/segement.cpp.o.provides: CMakeFiles/pcltest.dir/segement.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/segement.cpp.o.provides.build
-.PHONY : CMakeFiles/pcltest.dir/segement.cpp.o.provides
-
-CMakeFiles/pcltest.dir/segement.cpp.o.provides.build: CMakeFiles/pcltest.dir/segement.cpp.o
-
-
-CMakeFiles/pcltest.dir/normal.cpp.o: CMakeFiles/pcltest.dir/flags.make
-CMakeFiles/pcltest.dir/normal.cpp.o: normal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pcltest.dir/normal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcltest.dir/normal.cpp.o -c /home/w/Desktop/Workspace/pcltest/test/normal.cpp
-
-CMakeFiles/pcltest.dir/normal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcltest.dir/normal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/w/Desktop/Workspace/pcltest/test/normal.cpp > CMakeFiles/pcltest.dir/normal.cpp.i
-
-CMakeFiles/pcltest.dir/normal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcltest.dir/normal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/w/Desktop/Workspace/pcltest/test/normal.cpp -o CMakeFiles/pcltest.dir/normal.cpp.s
-
-CMakeFiles/pcltest.dir/normal.cpp.o.requires:
-
-.PHONY : CMakeFiles/pcltest.dir/normal.cpp.o.requires
-
-CMakeFiles/pcltest.dir/normal.cpp.o.provides: CMakeFiles/pcltest.dir/normal.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/normal.cpp.o.provides.build
-.PHONY : CMakeFiles/pcltest.dir/normal.cpp.o.provides
-
-CMakeFiles/pcltest.dir/normal.cpp.o.provides.build: CMakeFiles/pcltest.dir/normal.cpp.o
-
-
 # Object files for target pcltest
 pcltest_OBJECTS = \
-"CMakeFiles/pcltest.dir/main.cpp.o" \
-"CMakeFiles/pcltest.dir/viewer.cpp.o" \
-"CMakeFiles/pcltest.dir/filter.cpp.o" \
-"CMakeFiles/pcltest.dir/segement.cpp.o" \
-"CMakeFiles/pcltest.dir/normal.cpp.o"
+"CMakeFiles/pcltest.dir/main.cpp.o"
 
 # External object files for target pcltest
 pcltest_EXTERNAL_OBJECTS =
 
 pcltest: CMakeFiles/pcltest.dir/main.cpp.o
-pcltest: CMakeFiles/pcltest.dir/viewer.cpp.o
-pcltest: CMakeFiles/pcltest.dir/filter.cpp.o
-pcltest: CMakeFiles/pcltest.dir/segement.cpp.o
-pcltest: CMakeFiles/pcltest.dir/normal.cpp.o
 pcltest: CMakeFiles/pcltest.dir/build.make
 pcltest: /home/w/freenect2/lib/libfreenect2.so
 pcltest: /usr/local/lib/libopencv_videostab.so.2.4.13
@@ -247,6 +143,7 @@ pcltest: /usr/local/lib/libflann_cpp_s.a
 pcltest: /usr/lib/libvtkGenericFiltering.so.5.8.0
 pcltest: /usr/lib/libvtkGeovis.so.5.8.0
 pcltest: /usr/lib/libvtkCharts.so.5.8.0
+pcltest: liblibmypcl.a
 pcltest: /usr/lib/libpcl_common.so
 pcltest: /usr/lib/libpcl_kdtree.so
 pcltest: /usr/lib/libpcl_octree.so
@@ -293,7 +190,7 @@ pcltest: /usr/lib/libvtkFiltering.so.5.8.0
 pcltest: /usr/lib/libvtkCommon.so.5.8.0
 pcltest: /usr/lib/libvtksys.so.5.8.0
 pcltest: CMakeFiles/pcltest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pcltest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/w/Desktop/Workspace/pcltest/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable pcltest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pcltest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -302,10 +199,6 @@ CMakeFiles/pcltest.dir/build: pcltest
 .PHONY : CMakeFiles/pcltest.dir/build
 
 CMakeFiles/pcltest.dir/requires: CMakeFiles/pcltest.dir/main.cpp.o.requires
-CMakeFiles/pcltest.dir/requires: CMakeFiles/pcltest.dir/viewer.cpp.o.requires
-CMakeFiles/pcltest.dir/requires: CMakeFiles/pcltest.dir/filter.cpp.o.requires
-CMakeFiles/pcltest.dir/requires: CMakeFiles/pcltest.dir/segement.cpp.o.requires
-CMakeFiles/pcltest.dir/requires: CMakeFiles/pcltest.dir/normal.cpp.o.requires
 
 .PHONY : CMakeFiles/pcltest.dir/requires
 

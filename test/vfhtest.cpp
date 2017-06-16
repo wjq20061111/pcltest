@@ -1,7 +1,7 @@
-#include "VFH.h"
-#include "config.h"
 #include "filter.h"
+#include "VFH.h"
 #include "viewer.h"
+#include "config.h"
 #include <iostream>
 #include <sstream>
 

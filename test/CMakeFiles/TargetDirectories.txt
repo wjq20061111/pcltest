@@ -1,6 +1,8 @@
+/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/viewtest.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/rebuild_cache.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/capture.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/edit_cache.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/vfhtest.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir
 /home/w/Desktop/Workspace/pcltest/test/CMakeFiles/pcltest.dir
+/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/libmypcl.dir
