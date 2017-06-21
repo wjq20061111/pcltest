@@ -15,6 +15,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/w/freenect2/lib/cmake/freenect2/freenect2ConfigVersion.cmake"
   "/usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake"
   "/usr/lib/vtk-5.8/UseVTK.cmake"
+  "/usr/lib/vtk-5.8/VTKConfig-Java.cmake"
+  "/usr/lib/vtk-5.8/VTKConfig-Python.cmake"
+  "/usr/lib/vtk-5.8/VTKConfig-Tcl.cmake"
   "/usr/lib/vtk-5.8/VTKConfig.cmake"
   "/usr/lib/vtk-5.8/VTKConfigQt.cmake"
   "/usr/lib/vtk-5.8/VTKConfigVersion.cmake"
@@ -66,5 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/downsample.dir/DependInfo.cmake"
   "CMakeFiles/Passthrough_Filter.dir/DependInfo.cmake"
+  "CMakeFiles/filter.dir/DependInfo.cmake"
   )

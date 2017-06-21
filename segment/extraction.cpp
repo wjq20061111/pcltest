@@ -17,16 +17,16 @@ int main (int argc, char** argv)
   // Read in the cloud data
   pcl::PCDReader reader;
   pcl::PointCloud<PointT>::Ptr cloud (new pcl::PointCloud<PointT>), cloud_f (new pcl::PointCloud<PointT>);
-  reader.read ("data_passfil.pcd", *cloud);
+  reader.read ("data3.pcd", *cloud);
   std::cout << "PointCloud before filtering has: " << cloud->points.size () << " data points." << std::endl; //*
 
   // Create the filtering object: downsample the dataset using a leaf size of 1cm
-  pcl::VoxelGrid<PointT> vg;
-  pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
-  vg.setInputCloud (cloud);
-  vg.setLeafSize (0.01f, 0.01f, 0.01f);
-  vg.filter (*cloud_filtered);
-  std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl; //*
+  // pcl::VoxelGrid<PointT> vg;
+  // pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
+  // vg.setInputCloud (cloud);
+  // vg.setLeafSize (0.01f, 0.01f, 0.01f);
+  // vg.filter (*cloud_filtered);
+  // std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl; //*
 
   // Create the segmentation object for the planar model and set all the parameters
   pcl::SACSegmentation<PointT> seg;
@@ -40,11 +40,11 @@ int main (int argc, char** argv)
   seg.setMaxIterations (100);
   seg.setDistanceThreshold (0.02);
 
-  int i=0, nr_points = (int) cloud_filtered->points.size ();
-  while (cloud_filtered->points.size () > 0.3 * nr_points)
+  int i=0, nr_points = (int) cloud->points.size ();
+  while (cloud->points.size () > 0.3 * nr_points)
   {
     // Segment the largest planar component from the remaining cloud
-    seg.setInputCloud (cloud_filtered);
+    seg.setInputCloud (cloud);
     seg.segment (*inliers, *coefficients);
     if (inliers->indices.size () == 0)
     {
@@ -54,7 +54,7 @@ int main (int argc, char** argv)
 
     // Extract the planar inliers from the input cloud
     pcl::ExtractIndices<PointT> extract;
-    extract.setInputCloud (cloud_filtered);
+    extract.setInputCloud (cloud);
     extract.setIndices (inliers);
     extract.setNegative (false);
 
@@ -65,12 +65,12 @@ int main (int argc, char** argv)
     // Remove the planar inliers, extract the rest
     extract.setNegative (true);
     extract.filter (*cloud_f);
-    *cloud_filtered = *cloud_f;
+    *cloud = *cloud_f;
   }
 
   // Creating the KdTree object for the search method of the extraction
   pcl::search::KdTree<PointT>::Ptr tree (new pcl::search::KdTree<PointT>);
-  tree->setInputCloud (cloud_filtered);
+  tree->setInputCloud (cloud);
 
   std::vector<pcl::PointIndices> cluster_indices;
   pcl::EuclideanClusterExtraction<PointT> ec;
@@ -78,7 +78,7 @@ int main (int argc, char** argv)
   ec.setMinClusterSize (100);
   ec.setMaxClusterSize (25000);
   ec.setSearchMethod (tree);
-  ec.setInputCloud (cloud_filtered);
+  ec.setInputCloud (cloud);
   ec.extract (cluster_indices);
 
   int j = 0;
@@ -86,14 +86,14 @@ int main (int argc, char** argv)
   {
     pcl::PointCloud<PointT>::Ptr cloud_cluster (new pcl::PointCloud<PointT>);
     for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
-      cloud_cluster->points.push_back (cloud_filtered->points[*pit]); //*
+      cloud_cluster->points.push_back (cloud->points[*pit]); //*
     cloud_cluster->width = cloud_cluster->points.size ();
     cloud_cluster->height = 1;
     cloud_cluster->is_dense = true;
 
     std::cout << "PointCloud representing the Cluster: " << cloud_cluster->points.size () << " data points." << std::endl;
     std::stringstream ss;
-    ss << "seg/cloud_cluster_" << j << ".pcd";
+    ss << "seg/" << j << ".pcd";
     writer.write<PointT> (ss.str (), *cloud_cluster, false); //*
     j++;
   }

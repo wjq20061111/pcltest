@@ -54,10 +54,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/normal
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/normal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/normal
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/normal
 
 #=============================================================================
 # Target rules for target CMakeFiles/ptest.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/normal
 CMakeFiles/ptest.dir/all:
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/depend
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/normal/CMakeFiles --progress-num=1,2 "Built target ptest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/normal/CMakeFiles --progress-num=1,2 "Built target ptest"
 .PHONY : CMakeFiles/ptest.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/ptest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ptest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/normal/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/normal/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ptest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/normal/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/normal/CMakeFiles 0
 .PHONY : CMakeFiles/ptest.dir/rule
 
 # Convenience name for target.

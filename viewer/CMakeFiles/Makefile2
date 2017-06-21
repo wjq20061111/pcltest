@@ -54,45 +54,45 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/viewer
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/viewer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/viewer
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/viewer
 
 #=============================================================================
-# Target rules for target CMakeFiles/pcd_viewer.dir
+# Target rules for target CMakeFiles/mviewer.dir
 
 # All Build rule for target.
-CMakeFiles/pcd_viewer.dir/all:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/depend
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/viewer/CMakeFiles --progress-num=1,2 "Built target pcd_viewer"
-.PHONY : CMakeFiles/pcd_viewer.dir/all
+CMakeFiles/mviewer.dir/all:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/depend
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles --progress-num=1,2,3 "Built target mviewer"
+.PHONY : CMakeFiles/mviewer.dir/all
 
 # Include target in all.
-all: CMakeFiles/pcd_viewer.dir/all
+all: CMakeFiles/mviewer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pcd_viewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/viewer/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pcd_viewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/viewer/CMakeFiles 0
-.PHONY : CMakeFiles/pcd_viewer.dir/rule
+CMakeFiles/mviewer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mviewer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles 0
+.PHONY : CMakeFiles/mviewer.dir/rule
 
 # Convenience name for target.
-pcd_viewer: CMakeFiles/pcd_viewer.dir/rule
+mviewer: CMakeFiles/mviewer.dir/rule
 
-.PHONY : pcd_viewer
-
-# clean rule for target.
-CMakeFiles/pcd_viewer.dir/clean:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/clean
-.PHONY : CMakeFiles/pcd_viewer.dir/clean
+.PHONY : mviewer
 
 # clean rule for target.
-clean: CMakeFiles/pcd_viewer.dir/clean
+CMakeFiles/mviewer.dir/clean:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/clean
+.PHONY : CMakeFiles/mviewer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/mviewer.dir/clean
 
 .PHONY : clean
 

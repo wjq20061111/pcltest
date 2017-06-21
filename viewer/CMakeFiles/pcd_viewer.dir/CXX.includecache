@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/w/Desktop/Workspace/viewer/pcd_viewer.cpp
+/home/w/Desktop/Workspace/pcltest/viewer/pcd_viewer.cpp
 pcl/common/common.h
 -
 pcl/io/pcd_io.h

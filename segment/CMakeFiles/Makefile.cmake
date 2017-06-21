@@ -69,5 +69,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ptest.dir/DependInfo.cmake"
+  "CMakeFiles/min_cut.dir/DependInfo.cmake"
+  "CMakeFiles/region_growing_rgb_segmentation.dir/DependInfo.cmake"
+  "CMakeFiles/region_growing_segmentation.dir/DependInfo.cmake"
+  "CMakeFiles/findplane.dir/DependInfo.cmake"
+  "CMakeFiles/extraction.dir/DependInfo.cmake"
+  "CMakeFiles/cylinder_segmentation.dir/DependInfo.cmake"
   )

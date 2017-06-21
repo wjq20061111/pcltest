@@ -17,9 +17,44 @@ INCLUDE_DIRECTORIES(
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-ADD_EXECUTABLE(ptest
+ADD_EXECUTABLE(cylinder_segmentation
+  cylinder_segmentation.cpp
+)
+TARGET_LINK_LIBRARIES(cylinder_segmentation
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(extraction
   extraction.cpp
 )
-TARGET_LINK_LIBRARIES(ptest
+TARGET_LINK_LIBRARIES(extraction
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(findplane
+  main.cpp
+)
+TARGET_LINK_LIBRARIES(findplane
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(region_growing_segmentation
+  region_growing_segmentation.cpp
+)
+TARGET_LINK_LIBRARIES(region_growing_segmentation
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(region_growing_rgb_segmentation
+  region_growing_rgb_segmentation.cpp
+)
+TARGET_LINK_LIBRARIES(region_growing_rgb_segmentation
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
+) 
+
+ADD_EXECUTABLE(min_cut
+  min_cut.cpp
+)
+TARGET_LINK_LIBRARIES(min_cut
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 

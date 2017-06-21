@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/w/Desktop/Workspace/datacapture/passthrough.cpp
+/home/w/Desktop/Workspace/pcltest/datacapture/passthrough.cpp
 iostream
 -
 pcl/point_types.h

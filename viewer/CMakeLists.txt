@@ -17,9 +17,9 @@ INCLUDE_DIRECTORIES(
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-ADD_EXECUTABLE(pcd_viewer
-  pcd_viewer.cpp
+ADD_EXECUTABLE(mviewer
+  main.cpp viewer.cpp
 )
-TARGET_LINK_LIBRARIES(pcd_viewer
+TARGET_LINK_LIBRARIES(mviewer
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 

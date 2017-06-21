@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/viewer
+CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/viewer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/viewer
+CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/viewer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/viewer/CMakeFiles /home/w/Desktop/Workspace/viewer/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles /home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/viewer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/viewer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pcd_viewer
+# Target rules for targets named mviewer
 
 # Build rule for target.
-pcd_viewer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcd_viewer
-.PHONY : pcd_viewer
+mviewer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mviewer
+.PHONY : mviewer
 
 # fast build rule for target.
-pcd_viewer/fast:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/build
-.PHONY : pcd_viewer/fast
+mviewer/fast:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/build
+.PHONY : mviewer/fast
 
-pcd_viewer.o: pcd_viewer.cpp.o
+main.o: main.cpp.o
 
-.PHONY : pcd_viewer.o
+.PHONY : main.o
 
 # target to build an object file
-pcd_viewer.cpp.o:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/pcd_viewer.cpp.o
-.PHONY : pcd_viewer.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-pcd_viewer.i: pcd_viewer.cpp.i
+main.i: main.cpp.i
 
-.PHONY : pcd_viewer.i
+.PHONY : main.i
 
 # target to preprocess a source file
-pcd_viewer.cpp.i:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/pcd_viewer.cpp.i
-.PHONY : pcd_viewer.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-pcd_viewer.s: pcd_viewer.cpp.s
+main.s: main.cpp.s
 
-.PHONY : pcd_viewer.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-pcd_viewer.cpp.s:
-	$(MAKE) -f CMakeFiles/pcd_viewer.dir/build.make CMakeFiles/pcd_viewer.dir/pcd_viewer.cpp.s
-.PHONY : pcd_viewer.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+viewer.o: viewer.cpp.o
+
+.PHONY : viewer.o
+
+# target to build an object file
+viewer.cpp.o:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/viewer.cpp.o
+.PHONY : viewer.cpp.o
+
+viewer.i: viewer.cpp.i
+
+.PHONY : viewer.i
+
+# target to preprocess a source file
+viewer.cpp.i:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/viewer.cpp.i
+.PHONY : viewer.cpp.i
+
+viewer.s: viewer.cpp.s
+
+.PHONY : viewer.s
+
+# target to generate assembly for a file
+viewer.cpp.s:
+	$(MAKE) -f CMakeFiles/mviewer.dir/build.make CMakeFiles/mviewer.dir/viewer.cpp.s
+.PHONY : viewer.cpp.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... pcd_viewer"
-	@echo "... pcd_viewer.o"
-	@echo "... pcd_viewer.i"
-	@echo "... pcd_viewer.s"
+	@echo "... mviewer"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... viewer.o"
+	@echo "... viewer.i"
+	@echo "... viewer.s"
 .PHONY : help
 
 
