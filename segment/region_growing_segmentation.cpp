@@ -13,7 +13,7 @@ int main (int argc, char** argv)
 {
   typedef pcl::PointXYZ PointT;
   pcl::PointCloud<PointT>::Ptr cloud (new pcl::PointCloud<PointT>);
-  if ( pcl::io::loadPCDFile <PointT> ("cloud_trueplane.pcd", *cloud) == -1)
+  if ( pcl::io::loadPCDFile <PointT> ("data2.pcd", *cloud) == -1)
   {
     std::cout << "Cloud reading failed." << std::endl;
     return (-1);
@@ -42,8 +42,8 @@ int main (int argc, char** argv)
   reg.setInputCloud (cloud);
   //reg.setIndices (indices);
   reg.setInputNormals (normals);
-  reg.setSmoothnessThreshold (3.0 / 180.0 * M_PI);
-  reg.setCurvatureThreshold (1.0);
+  reg.setSmoothnessThreshold (5.0 / 180.0 * M_PI);
+  reg.setCurvatureThreshold (1);
 
   std::vector <pcl::PointIndices> clusters;
   reg.extract (clusters);

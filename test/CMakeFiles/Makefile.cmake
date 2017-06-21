@@ -10,7 +10,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.8.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.1/CMakeSystem.cmake"
+  "CMakeFiles/hdf5/cmake_hdf5_test.cxx"
   "CMakeLists.txt"
+  "cmake_modules/FindFlann.cmake"
   "/home/w/freenect2/lib/cmake/freenect2/freenect2Config.cmake"
   "/home/w/freenect2/lib/cmake/freenect2/freenect2ConfigVersion.cmake"
   "/usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake"
@@ -43,6 +45,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.8/Modules/Compiler/GNU-CXX.cmake"
   "/usr/local/share/cmake-3.8/Modules/Compiler/GNU.cmake"
   "/usr/local/share/cmake-3.8/Modules/FindBoost.cmake"
+  "/usr/local/share/cmake-3.8/Modules/FindHDF5.cmake"
   "/usr/local/share/cmake-3.8/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/local/share/cmake-3.8/Modules/FindPackageMessage.cmake"
   "/usr/local/share/cmake-3.8/Modules/FindPkgConfig.cmake"
@@ -52,6 +55,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.8/Modules/Platform/Linux-GNU.cmake"
   "/usr/local/share/cmake-3.8/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.8/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/share/cmake-3.8/Modules/SelectLibraryConfigurations.cmake"
   "/usr/share/pcl-1.7/PCLConfig.cmake"
   "/usr/share/pcl-1.7/PCLConfigVersion.cmake"
   )
@@ -69,10 +73,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/viewtest.dir/DependInfo.cmake"
-  "CMakeFiles/capture.dir/DependInfo.cmake"
   "CMakeFiles/vfhtest.dir/DependInfo.cmake"
   "CMakeFiles/segtest.dir/DependInfo.cmake"
-  "CMakeFiles/pcltest.dir/DependInfo.cmake"
   "CMakeFiles/libmypcl.dir/DependInfo.cmake"
   )

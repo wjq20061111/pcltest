@@ -157,23 +157,48 @@ int main (int argc, char** argv)
 			}
 		}
 
+	writer.write<PointT> ("temp.pcd",*src_cloud);
+	reader.read("temp.pcd", *src_cloud);
 		pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
 		pcl::PointCloud<PointT>::Ptr cloud_passfiltered (new pcl::PointCloud<PointT>);
 		passthroughfilter(src_cloud,cloud_passfiltered,'y',-0.2,0.2);
 		passthroughfilter(cloud_passfiltered,cloud_passfiltered,'z',0,1.2);
 		threedfilter(cloud_passfiltered,cloud_filtered);
 
+		std::vector<pcl::PointIndices> cluster_indices;
+		calEuclideanClusterExtraction(cloud_filtered,cluster_indices);
 
 
-		if(framecount==0)
-		{
-			viewer.addPointCloud (cloud_filtered,"cloud");
+	pcl::PointCloud<PointT>::Ptr target (new pcl::PointCloud<PointT> ());
+	int j = 0;
+	for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin (); it != cluster_indices.end (); ++it)
+	{
+		pcl::PointCloud<PointT>::Ptr cloud_cluster (new pcl::PointCloud<PointT>);
+		for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
+			cloud_cluster->points.push_back (cloud_filtered->points[*pit]); //*
+		cloud_cluster->width = cloud_cluster->points.size ();
+		cloud_cluster->height = 1;
+		cloud_cluster->is_dense = true;
+
+		std::cout << "PointCloud representing the Cluster: " << cloud_cluster->points.size () << " data points." << std::endl;
+		std::stringstream ss;
+		ss << "seg/"<< j << ".pcd";
+		writer.write<PointT> (ss.str (), *cloud_cluster, false); //*
+		j++;
+		if(j==1)
+			reader.read (ss.str(), *target);
+	}
+
+		
+			viewer.removeAllPointClouds();
+			viewer.addPointCloud (src_cloud,"cloud");
 			viewer.addCoordinateSystem (1.0, "cloud", 0);
 			viewer.setBackgroundColor(0.3, 0.3, 0.3, 0); // Setting background to a dark grey
 			viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "cloud");
-		}
-		else
-			viewer.updatePointCloud (cloud_filtered,"cloud");
+			pcl::visualization::PointCloudColorHandlerCustom<PointT> color_handler (target,255,0,0);
+			viewer.addPointCloud (target,color_handler, "target");
+			viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "target");
+		
 		viewer.registerKeyboardCallback(&keyboardEventOccurred, (void*)NULL);
 
 		//while (!viewer.wasStopped ()) { // Display the visualiser until 'q' key is pressed

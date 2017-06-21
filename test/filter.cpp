@@ -45,11 +45,13 @@ void downsamplefilter(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 void extractinliers(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	const pcl::PointIndices::Ptr &inliers , 
 	pcl::PointCloud<PointT>::Ptr  &cloud_filtered,
-	bool flag)
+	bool Negative_flag,
+	bool Organized_flag)
 {
 	pcl::ExtractIndices<PointT> extract;
 	extract.setInputCloud (cloud);
 	extract.setIndices (inliers);
-	extract.setNegative (flag);
+	extract.setNegative (Negative_flag);
+	extract.setKeepOrganized(Organized_flag);
 	extract.filter (*cloud_filtered);
 }

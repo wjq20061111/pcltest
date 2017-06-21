@@ -71,7 +71,7 @@ int viewport=0;
 viewer.createViewPort (0.5, 0, 1, 1, viewport);
 	viewer.addPointCloud (src_cloud,"cloud2",viewport);
 	viewer.addCoordinateSystem (0.1, "cloud2", 0);
-	viewer.setBackgroundColor(0.3, 0.3, 0.3, 0); // Setting background to a dark grey
+	viewer.setBackgroundColor(0.1, 0.1, 0.1, 0); // Setting background to a dark grey
 	viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "cloud2");
 	pcl::visualization::PointCloudColorHandlerCustom<PointT> color_handler2 (temp_cloud_plane,255,0,0);
 	viewer.addPointCloud (temp_cloud_plane,color_handler2, "target2",viewport);

@@ -15,6 +15,6 @@
 void threedfilter(const pcl::PointCloud<PointT>::Ptr  &cloud , pcl::PointCloud<PointT>::Ptr  &cloud_filtered);
 void passthroughfilter(const pcl::PointCloud<PointT>::Ptr  &cloud , pcl::PointCloud<PointT>::Ptr  &cloud_filtered,char field='z',float limitdown=0.0,float limitup=1.5);
 void downsamplefilter(const pcl::PointCloud<PointT>::Ptr  &cloud , pcl::PointCloud<PointT>::Ptr  &cloud_filtered);
-void extractinliers(const pcl::PointCloud<PointT>::Ptr  &cloud ,const pcl::PointIndices::Ptr &inliers , pcl::PointCloud<PointT>::Ptr  &cloud_filtered,bool flag=false);
+void extractinliers(const pcl::PointCloud<PointT>::Ptr  &cloud ,const pcl::PointIndices::Ptr &inliers , pcl::PointCloud<PointT>::Ptr  &cloud_filtered,bool Negative_flag=false,bool Organized_flag=false);
 
 #endif // !FILTER_H

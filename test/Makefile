@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named viewtest
-
-# Build rule for target.
-viewtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 viewtest
-.PHONY : viewtest
-
-# fast build rule for target.
-viewtest/fast:
-	$(MAKE) -f CMakeFiles/viewtest.dir/build.make CMakeFiles/viewtest.dir/build
-.PHONY : viewtest/fast
-
-#=============================================================================
-# Target rules for targets named capture
-
-# Build rule for target.
-capture: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 capture
-.PHONY : capture
-
-# fast build rule for target.
-capture/fast:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
-.PHONY : capture/fast
-
-#=============================================================================
 # Target rules for targets named vfhtest
 
 # Build rule for target.
@@ -161,19 +135,6 @@ segtest: cmake_check_build_system
 segtest/fast:
 	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/build
 .PHONY : segtest/fast
-
-#=============================================================================
-# Target rules for targets named pcltest
-
-# Build rule for target.
-pcltest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcltest
-.PHONY : pcltest
-
-# fast build rule for target.
-pcltest/fast:
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/build
-.PHONY : pcltest/fast
 
 #=============================================================================
 # Target rules for targets named libmypcl
@@ -215,32 +176,32 @@ VFH.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/VFH.cpp.s
 .PHONY : VFH.cpp.s
 
-capture.o: capture.cpp.o
+feature.o: feature.cpp.o
 
-.PHONY : capture.o
+.PHONY : feature.o
 
 # target to build an object file
-capture.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.o
-.PHONY : capture.cpp.o
+feature.cpp.o:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/feature.cpp.o
+.PHONY : feature.cpp.o
 
-capture.i: capture.cpp.i
+feature.i: feature.cpp.i
 
-.PHONY : capture.i
+.PHONY : feature.i
 
 # target to preprocess a source file
-capture.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.i
-.PHONY : capture.cpp.i
+feature.cpp.i:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/feature.cpp.i
+.PHONY : feature.cpp.i
 
-capture.s: capture.cpp.s
+feature.s: feature.cpp.s
 
-.PHONY : capture.s
+.PHONY : feature.s
 
 # target to generate assembly for a file
-capture.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.s
-.PHONY : capture.cpp.s
+feature.cpp.s:
+	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/feature.cpp.s
+.PHONY : feature.cpp.s
 
 filter.o: filter.cpp.o
 
@@ -268,33 +229,6 @@ filter.s: filter.cpp.s
 filter.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/filter.cpp.s
 .PHONY : filter.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/pcltest.dir/build.make CMakeFiles/pcltest.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 normal.o: normal.cpp.o
 
@@ -431,59 +365,26 @@ viewer.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/viewer.cpp.s
 .PHONY : viewer.cpp.s
 
-viewtest.o: viewtest.cpp.o
-
-.PHONY : viewtest.o
-
-# target to build an object file
-viewtest.cpp.o:
-	$(MAKE) -f CMakeFiles/viewtest.dir/build.make CMakeFiles/viewtest.dir/viewtest.cpp.o
-.PHONY : viewtest.cpp.o
-
-viewtest.i: viewtest.cpp.i
-
-.PHONY : viewtest.i
-
-# target to preprocess a source file
-viewtest.cpp.i:
-	$(MAKE) -f CMakeFiles/viewtest.dir/build.make CMakeFiles/viewtest.dir/viewtest.cpp.i
-.PHONY : viewtest.cpp.i
-
-viewtest.s: viewtest.cpp.s
-
-.PHONY : viewtest.s
-
-# target to generate assembly for a file
-viewtest.cpp.s:
-	$(MAKE) -f CMakeFiles/viewtest.dir/build.make CMakeFiles/viewtest.dir/viewtest.cpp.s
-.PHONY : viewtest.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... viewtest"
 	@echo "... rebuild_cache"
-	@echo "... capture"
 	@echo "... edit_cache"
 	@echo "... vfhtest"
 	@echo "... segtest"
-	@echo "... pcltest"
 	@echo "... libmypcl"
 	@echo "... VFH.o"
 	@echo "... VFH.i"
 	@echo "... VFH.s"
-	@echo "... capture.o"
-	@echo "... capture.i"
-	@echo "... capture.s"
+	@echo "... feature.o"
+	@echo "... feature.i"
+	@echo "... feature.s"
 	@echo "... filter.o"
 	@echo "... filter.i"
 	@echo "... filter.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... normal.o"
 	@echo "... normal.i"
 	@echo "... normal.s"
@@ -499,9 +400,6 @@ help:
 	@echo "... viewer.o"
 	@echo "... viewer.i"
 	@echo "... viewer.s"
-	@echo "... viewtest.o"
-	@echo "... viewtest.i"
-	@echo "... viewtest.s"
 .PHONY : help
 
 

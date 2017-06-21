@@ -29,6 +29,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/eigen3"
   "/usr/include/ni"
   "/usr/include/openni2"
+  "/usr/local/hdf5/include"
   )
 
 # Targets to which this target links.

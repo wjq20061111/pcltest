@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/w/Desktop/Workspace/pcltest/test/feature.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/feature.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/test/segtest.cpp" "/home/w/Desktop/Workspace/pcltest/test/CMakeFiles/segtest.dir/segtest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -29,6 +30,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/eigen3"
   "/usr/include/ni"
   "/usr/include/openni2"
+  "/usr/local/hdf5/include"
   )
 
 # Targets to which this target links.
