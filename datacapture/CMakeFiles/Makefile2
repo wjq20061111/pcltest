@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/datacapture
 CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/datacapture
 
 #=============================================================================
-# Target rules for target CMakeFiles/capture.dir
+# Target rules for target CMakeFiles/capture_debug.dir
 
 # All Build rule for target.
-CMakeFiles/capture.dir/all:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/depend
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles --progress-num=1,2,3 "Built target capture"
-.PHONY : CMakeFiles/capture.dir/all
+CMakeFiles/capture_debug.dir/all:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/depend
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles --progress-num=1,2,3,4 "Built target capture_debug"
+.PHONY : CMakeFiles/capture_debug.dir/all
 
 # Include target in all.
-all: CMakeFiles/capture.dir/all
+all: CMakeFiles/capture_debug.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/capture.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/capture.dir/all
+CMakeFiles/capture_debug.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/capture_debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles 0
-.PHONY : CMakeFiles/capture.dir/rule
+.PHONY : CMakeFiles/capture_debug.dir/rule
 
 # Convenience name for target.
-capture: CMakeFiles/capture.dir/rule
+capture_debug: CMakeFiles/capture_debug.dir/rule
 
-.PHONY : capture
-
-# clean rule for target.
-CMakeFiles/capture.dir/clean:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/clean
-.PHONY : CMakeFiles/capture.dir/clean
+.PHONY : capture_debug
 
 # clean rule for target.
-clean: CMakeFiles/capture.dir/clean
+CMakeFiles/capture_debug.dir/clean:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/clean
+.PHONY : CMakeFiles/capture_debug.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/capture_debug.dir/clean
 
 .PHONY : clean
 
@@ -103,7 +103,7 @@ clean: CMakeFiles/capture.dir/clean
 CMakeFiles/ptest.dir/all:
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/depend
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles --progress-num=4,5 "Built target ptest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles --progress-num=5,6 "Built target ptest"
 .PHONY : CMakeFiles/ptest.dir/all
 
 # Include target in all.

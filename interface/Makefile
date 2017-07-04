@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named interface
+
+# Build rule for target.
+interface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 interface
+.PHONY : interface
+
+# fast build rule for target.
+interface/fast:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/build
+.PHONY : interface/fast
+
+#=============================================================================
 # Target rules for targets named ptest
 
 # Build rule for target.
@@ -122,6 +135,87 @@ ptest: cmake_check_build_system
 ptest/fast:
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/build
 .PHONY : ptest/fast
+
+iai/depth_registration_cpu.o: iai/depth_registration_cpu.cpp.o
+
+.PHONY : iai/depth_registration_cpu.o
+
+# target to build an object file
+iai/depth_registration_cpu.cpp.o:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/depth_registration_cpu.cpp.o
+.PHONY : iai/depth_registration_cpu.cpp.o
+
+iai/depth_registration_cpu.i: iai/depth_registration_cpu.cpp.i
+
+.PHONY : iai/depth_registration_cpu.i
+
+# target to preprocess a source file
+iai/depth_registration_cpu.cpp.i:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/depth_registration_cpu.cpp.i
+.PHONY : iai/depth_registration_cpu.cpp.i
+
+iai/depth_registration_cpu.s: iai/depth_registration_cpu.cpp.s
+
+.PHONY : iai/depth_registration_cpu.s
+
+# target to generate assembly for a file
+iai/depth_registration_cpu.cpp.s:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/depth_registration_cpu.cpp.s
+.PHONY : iai/depth_registration_cpu.cpp.s
+
+iai/kinect2_registration.o: iai/kinect2_registration.cpp.o
+
+.PHONY : iai/kinect2_registration.o
+
+# target to build an object file
+iai/kinect2_registration.cpp.o:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/kinect2_registration.cpp.o
+.PHONY : iai/kinect2_registration.cpp.o
+
+iai/kinect2_registration.i: iai/kinect2_registration.cpp.i
+
+.PHONY : iai/kinect2_registration.i
+
+# target to preprocess a source file
+iai/kinect2_registration.cpp.i:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/kinect2_registration.cpp.i
+.PHONY : iai/kinect2_registration.cpp.i
+
+iai/kinect2_registration.s: iai/kinect2_registration.cpp.s
+
+.PHONY : iai/kinect2_registration.s
+
+# target to generate assembly for a file
+iai/kinect2_registration.cpp.s:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/iai/kinect2_registration.cpp.s
+.PHONY : iai/kinect2_registration.cpp.s
+
+interface.o: interface.cpp.o
+
+.PHONY : interface.o
+
+# target to build an object file
+interface.cpp.o:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.o
+.PHONY : interface.cpp.o
+
+interface.i: interface.cpp.i
+
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.cpp.i:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.i
+.PHONY : interface.cpp.i
+
+interface.s: interface.cpp.s
+
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.cpp.s:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.s
+.PHONY : interface.cpp.s
 
 main.o: main.cpp.o
 
@@ -158,7 +252,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... interface"
 	@echo "... ptest"
+	@echo "... iai/depth_registration_cpu.o"
+	@echo "... iai/depth_registration_cpu.i"
+	@echo "... iai/depth_registration_cpu.s"
+	@echo "... iai/kinect2_registration.o"
+	@echo "... iai/kinect2_registration.i"
+	@echo "... iai/kinect2_registration.s"
+	@echo "... interface.o"
+	@echo "... interface.i"
+	@echo "... interface.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

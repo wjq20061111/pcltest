@@ -24,9 +24,9 @@ TARGET_LINK_LIBRARIES(ptest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 
 
-ADD_EXECUTABLE(capture
-  main.cpp
+ADD_EXECUTABLE(capture_debug
+  main.cpp filter.cpp viewer.cpp
 )
-TARGET_LINK_LIBRARIES(capture
+TARGET_LINK_LIBRARIES(capture_debug
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}
 ) 

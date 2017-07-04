@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/capture.dir/main.cpp.o"
   "CMakeFiles/capture.dir/filter.cpp.o"
+  "CMakeFiles/capture.dir/viewer.cpp.o"
   "capture.pdb"
   "capture"
 )

@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vfhtest
+# Target rules for targets named interface
 
 # Build rule for target.
-vfhtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vfhtest
-.PHONY : vfhtest
+interface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 interface
+.PHONY : interface
 
 # fast build rule for target.
-vfhtest/fast:
-	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/build
-.PHONY : vfhtest/fast
+interface/fast:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/build
+.PHONY : interface/fast
 
 #=============================================================================
 # Target rules for targets named segtest
@@ -230,6 +230,33 @@ filter.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/filter.cpp.s
 .PHONY : filter.cpp.s
 
+interface.o: interface.cpp.o
+
+.PHONY : interface.o
+
+# target to build an object file
+interface.cpp.o:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.o
+.PHONY : interface.cpp.o
+
+interface.i: interface.cpp.i
+
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.cpp.i:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.i
+.PHONY : interface.cpp.i
+
+interface.s: interface.cpp.s
+
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.cpp.s:
+	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/interface.cpp.s
+.PHONY : interface.cpp.s
+
 normal.o: normal.cpp.o
 
 .PHONY : normal.o
@@ -311,33 +338,6 @@ segtest.cpp.s:
 	$(MAKE) -f CMakeFiles/segtest.dir/build.make CMakeFiles/segtest.dir/segtest.cpp.s
 .PHONY : segtest.cpp.s
 
-vfhtest.o: vfhtest.cpp.o
-
-.PHONY : vfhtest.o
-
-# target to build an object file
-vfhtest.cpp.o:
-	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.o
-.PHONY : vfhtest.cpp.o
-
-vfhtest.i: vfhtest.cpp.i
-
-.PHONY : vfhtest.i
-
-# target to preprocess a source file
-vfhtest.cpp.i:
-	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.i
-.PHONY : vfhtest.cpp.i
-
-vfhtest.s: vfhtest.cpp.s
-
-.PHONY : vfhtest.s
-
-# target to generate assembly for a file
-vfhtest.cpp.s:
-	$(MAKE) -f CMakeFiles/vfhtest.dir/build.make CMakeFiles/vfhtest.dir/vfhtest.cpp.s
-.PHONY : vfhtest.cpp.s
-
 viewer.o: viewer.cpp.o
 
 .PHONY : viewer.o
@@ -373,7 +373,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... vfhtest"
+	@echo "... interface"
 	@echo "... segtest"
 	@echo "... libmypcl"
 	@echo "... VFH.o"
@@ -385,6 +385,9 @@ help:
 	@echo "... filter.o"
 	@echo "... filter.i"
 	@echo "... filter.s"
+	@echo "... interface.o"
+	@echo "... interface.i"
+	@echo "... interface.s"
 	@echo "... normal.o"
 	@echo "... normal.i"
 	@echo "... normal.s"
@@ -394,9 +397,6 @@ help:
 	@echo "... segtest.o"
 	@echo "... segtest.i"
 	@echo "... segtest.s"
-	@echo "... vfhtest.o"
-	@echo "... vfhtest.i"
-	@echo "... vfhtest.s"
 	@echo "... viewer.o"
 	@echo "... viewer.i"
 	@echo "... viewer.s"

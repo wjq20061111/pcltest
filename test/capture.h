@@ -5,6 +5,10 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
+#include <cmath>
+#include <utility>
+#include <algorithm>
 
 //kinect2
 #include <libfreenect2/libfreenect2.hpp>

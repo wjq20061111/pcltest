@@ -18,6 +18,6 @@
 #include <utility>
 #include <string>
 
-int nKSearch(pcl::PointCloud<pcl::VFHSignature308>::Ptr &targetvfhs , std::vector<std::pair<int,float> > &kdistance);
+int nKSearch(pcl::PointCloud<pcl::VFHSignature308>::Ptr &targetvfhs , std::vector<std::pair<int,float> > &kdistance,int turn=0);
 
 #endif // !FEATURE_H

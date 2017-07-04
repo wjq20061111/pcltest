@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/w/Desktop/Workspace/pcltest/datacapture/filter.cpp" "/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/capture.dir/filter.cpp.o"
   "/home/w/Desktop/Workspace/pcltest/datacapture/main.cpp" "/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/capture.dir/main.cpp.o"
+  "/home/w/Desktop/Workspace/pcltest/datacapture/viewer.cpp" "/home/w/Desktop/Workspace/pcltest/datacapture/CMakeFiles/capture.dir/viewer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

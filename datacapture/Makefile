@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/datacapture
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named capture
+# Target rules for targets named capture_debug
 
 # Build rule for target.
-capture: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 capture
-.PHONY : capture
+capture_debug: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 capture_debug
+.PHONY : capture_debug
 
 # fast build rule for target.
-capture/fast:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
-.PHONY : capture/fast
+capture_debug/fast:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/build
+.PHONY : capture_debug/fast
 
 #=============================================================================
 # Target rules for targets named ptest
@@ -142,7 +142,7 @@ filter.o: filter.cpp.o
 
 # target to build an object file
 filter.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.o
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/filter.cpp.o
 .PHONY : filter.cpp.o
 
 filter.i: filter.cpp.i
@@ -151,7 +151,7 @@ filter.i: filter.cpp.i
 
 # target to preprocess a source file
 filter.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.i
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/filter.cpp.i
 .PHONY : filter.cpp.i
 
 filter.s: filter.cpp.s
@@ -160,7 +160,7 @@ filter.s: filter.cpp.s
 
 # target to generate assembly for a file
 filter.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/filter.cpp.s
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/filter.cpp.s
 .PHONY : filter.cpp.s
 
 main.o: main.cpp.o
@@ -169,7 +169,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -178,7 +178,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -187,7 +187,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 passthrough.o: passthrough.cpp.o
@@ -217,15 +217,42 @@ passthrough.cpp.s:
 	$(MAKE) -f CMakeFiles/ptest.dir/build.make CMakeFiles/ptest.dir/passthrough.cpp.s
 .PHONY : passthrough.cpp.s
 
+viewer.o: viewer.cpp.o
+
+.PHONY : viewer.o
+
+# target to build an object file
+viewer.cpp.o:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/viewer.cpp.o
+.PHONY : viewer.cpp.o
+
+viewer.i: viewer.cpp.i
+
+.PHONY : viewer.i
+
+# target to preprocess a source file
+viewer.cpp.i:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/viewer.cpp.i
+.PHONY : viewer.cpp.i
+
+viewer.s: viewer.cpp.s
+
+.PHONY : viewer.s
+
+# target to generate assembly for a file
+viewer.cpp.s:
+	$(MAKE) -f CMakeFiles/capture_debug.dir/build.make CMakeFiles/capture_debug.dir/viewer.cpp.s
+.PHONY : viewer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... capture"
+	@echo "... edit_cache"
+	@echo "... capture_debug"
 	@echo "... ptest"
 	@echo "... filter.o"
 	@echo "... filter.i"
@@ -236,6 +263,9 @@ help:
 	@echo "... passthrough.o"
 	@echo "... passthrough.i"
 	@echo "... passthrough.s"
+	@echo "... viewer.o"
+	@echo "... viewer.i"
+	@echo "... viewer.s"
 .PHONY : help
 
 

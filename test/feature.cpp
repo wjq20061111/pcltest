@@ -101,11 +101,11 @@ loadFileList (std::vector<vfh_model> &models, const std::string &filename)
 // {
 
 int nKSearch(pcl::PointCloud<pcl::VFHSignature308>::Ptr &targetvfhs,
-	std::vector<std::pair<int,float> > &kdistance
-	)
+	std::vector<std::pair<int,float> > &kdistance,
+	int turn)
 {
 	int k = 6;
-static int turn=0;
+//static int turn=0;
 	double thresh = DBL_MAX;     // No threshold, disabled by default
 
   // if (argc < 2)
