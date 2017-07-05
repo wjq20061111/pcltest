@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/w/Desktop/Workspace/pcltest/mainwork/lib/libinterface.a  CMakeFiles/interface.dir/interface.cpp.o CMakeFiles/interface.dir/iai/depth_registration_cpu.cpp.o CMakeFiles/interface.dir/iai/kinect2_registration.cpp.o
+/usr/bin/ranlib /home/w/Desktop/Workspace/pcltest/mainwork/lib/libinterface.a

@@ -1,3 +1,0 @@
-/home/w/Desktop/Workspace/pcltest/mainwork/build/CMakeFiles/rebuild_cache.dir
-/home/w/Desktop/Workspace/pcltest/mainwork/build/CMakeFiles/edit_cache.dir
-/home/w/Desktop/Workspace/pcltest/mainwork/build/CMakeFiles/pcltest.dir

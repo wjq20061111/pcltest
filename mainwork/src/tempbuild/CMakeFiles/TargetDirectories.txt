@@ -1,0 +1,5 @@
+/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles/rebuild_cache.dir
+/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles/edit_cache.dir
+/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles/libmypcl.dir
+/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles/temptest.dir
+/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles/interface.dir
