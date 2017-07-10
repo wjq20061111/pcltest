@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named buildmodel
+
+# Build rule for target.
+buildmodel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buildmodel
+.PHONY : buildmodel
+
+# fast build rule for target.
+buildmodel/fast:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/build
+.PHONY : buildmodel/fast
+
+#=============================================================================
 # Target rules for targets named interface
 
 # Build rule for target.
@@ -175,6 +188,33 @@ VFH.s: VFH.cpp.s
 VFH.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/VFH.cpp.s
 .PHONY : VFH.cpp.s
+
+buildmodel.o: buildmodel.cpp.o
+
+.PHONY : buildmodel.o
+
+# target to build an object file
+buildmodel.cpp.o:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.o
+.PHONY : buildmodel.cpp.o
+
+buildmodel.i: buildmodel.cpp.i
+
+.PHONY : buildmodel.i
+
+# target to preprocess a source file
+buildmodel.cpp.i:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.i
+.PHONY : buildmodel.cpp.i
+
+buildmodel.s: buildmodel.cpp.s
+
+.PHONY : buildmodel.s
+
+# target to generate assembly for a file
+buildmodel.cpp.s:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.s
+.PHONY : buildmodel.cpp.s
 
 feature.o: feature.cpp.o
 
@@ -373,12 +413,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... buildmodel"
 	@echo "... interface"
 	@echo "... segtest"
 	@echo "... libmypcl"
 	@echo "... VFH.o"
 	@echo "... VFH.i"
 	@echo "... VFH.s"
+	@echo "... buildmodel.o"
+	@echo "... buildmodel.i"
+	@echo "... buildmodel.s"
 	@echo "... feature.o"
 	@echo "... feature.i"
 	@echo "... feature.s"

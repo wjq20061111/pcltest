@@ -60,13 +60,89 @@ CMAKE_SOURCE_DIR = /home/w/Desktop/Workspace/pcltest/mainwork/src
 CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild
 
 #=============================================================================
+# Target rules for target CMakeFiles/buildmodel.dir
+
+# All Build rule for target.
+CMakeFiles/buildmodel.dir/all: CMakeFiles/libmypcl.dir/all
+CMakeFiles/buildmodel.dir/all: CMakeFiles/interface.dir/all
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/depend
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=1,2 "Built target buildmodel"
+.PHONY : CMakeFiles/buildmodel.dir/all
+
+# Include target in all.
+all: CMakeFiles/buildmodel.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/buildmodel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/buildmodel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles 0
+.PHONY : CMakeFiles/buildmodel.dir/rule
+
+# Convenience name for target.
+buildmodel: CMakeFiles/buildmodel.dir/rule
+
+.PHONY : buildmodel
+
+# clean rule for target.
+CMakeFiles/buildmodel.dir/clean:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/clean
+.PHONY : CMakeFiles/buildmodel.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/buildmodel.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/capture.dir
+
+# All Build rule for target.
+CMakeFiles/capture.dir/all: CMakeFiles/libmypcl.dir/all
+CMakeFiles/capture.dir/all: CMakeFiles/interface.dir/all
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/depend
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=3,4 "Built target capture"
+.PHONY : CMakeFiles/capture.dir/all
+
+# Include target in all.
+all: CMakeFiles/capture.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/capture.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/capture.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles 0
+.PHONY : CMakeFiles/capture.dir/rule
+
+# Convenience name for target.
+capture: CMakeFiles/capture.dir/rule
+
+.PHONY : capture
+
+# clean rule for target.
+CMakeFiles/capture.dir/clean:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/clean
+.PHONY : CMakeFiles/capture.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/capture.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/libmypcl.dir
 
 # All Build rule for target.
 CMakeFiles/libmypcl.dir/all: CMakeFiles/interface.dir/all
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/depend
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target libmypcl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=9,10,11,12,13,14 "Built target libmypcl"
 .PHONY : CMakeFiles/libmypcl.dir/all
 
 # Include target in all.
@@ -104,7 +180,7 @@ CMakeFiles/temptest.dir/all: CMakeFiles/libmypcl.dir/all
 CMakeFiles/temptest.dir/all: CMakeFiles/interface.dir/all
 	$(MAKE) -f CMakeFiles/temptest.dir/build.make CMakeFiles/temptest.dir/depend
 	$(MAKE) -f CMakeFiles/temptest.dir/build.make CMakeFiles/temptest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=11,12,13 "Built target temptest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=15,16,17 "Built target temptest"
 .PHONY : CMakeFiles/temptest.dir/all
 
 # Include target in all.
@@ -141,7 +217,7 @@ clean: CMakeFiles/temptest.dir/clean
 CMakeFiles/interface.dir/all:
 	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/depend
 	$(MAKE) -f CMakeFiles/interface.dir/build.make CMakeFiles/interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=1,2,3,4 "Built target interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild/CMakeFiles --progress-num=5,6,7,8 "Built target interface"
 .PHONY : CMakeFiles/interface.dir/all
 
 # Include target in all.

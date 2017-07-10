@@ -69,3 +69,10 @@ ADD_EXECUTABLE(interface
 TARGET_LINK_LIBRARIES(interface
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 ) 
+
+ADD_EXECUTABLE(buildmodel
+  buildmodel.cpp
+)
+TARGET_LINK_LIBRARIES(buildmodel
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
+) 

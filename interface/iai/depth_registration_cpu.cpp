@@ -129,7 +129,7 @@ void DepthRegistrationCPU::remapDepth(const cv::Mat &depth, cv::Mat &scaled) con
   }
 }
 
-void DepthRegistrationCPU::projectDepth(const cv::Mat &scaled, cv::Mat &registered,cv::Mat &color,pcl::PointCloud<PointT>::Ptr &src_cloud) 
+void DepthRegistrationCPU::projectDepth(const cv::Mat &scaled, cv::Mat &registered) 
 {
   registered = cv::Mat::zeros(sizeRegistered, CV_16U);
 
@@ -167,31 +167,28 @@ void DepthRegistrationCPU::projectDepth(const cv::Mat &scaled, cv::Mat &register
           zReg = z16;
           // pointxyz.push_back(pointP);
         //Eigen::Vector4d pointP;
-        pcl::PointCloud<PointT>::PointType p;
-        p.x = pointP[0];
-        p.y = pointP[1];
-        p.z = pointP[2];
-        cv::Vec3b bgr = color.at<cv::Vec3b>(yP,xP);
-        p.b = bgr[0];
-        p.g = bgr[1];
-        p.r = bgr[2];
-        src_cloud->push_back(p);
         }
+        // pcl::PointCloud<PointT>::PointType p;
+        // p.x = pointP[0];
+        // p.y = pointP[1];
+        // p.z = pointP[2];
+        // cv::Vec3b bgr = color.at<cv::Vec3b>(yP,xP);
+        // p.b = bgr[0];
+        // p.g = bgr[1];
+        // p.r = bgr[2];
+        // src_cloud->push_back(p);
+        
       }
     }
   }
 }
 
-void DepthRegistrationCPU::getxyz(int x,int y,Eigen::Vector4d &pointP)
-{
-  pointP=pointxyz.at(x*sizeRegistered.width+y);
-}
 
-bool DepthRegistrationCPU::registerDepth(const cv::Mat &depth, cv::Mat &registered,cv::Mat &color,pcl::PointCloud<PointT>::Ptr &src_cloud)
+bool DepthRegistrationCPU::registerDepth(const cv::Mat &depth, cv::Mat &registered)
 {
   cv::Mat scaled;
   remapDepth(depth, scaled);
-  projectDepth(scaled, registered,color,src_cloud);
+  projectDepth(scaled, registered);
   return true;
 }
 

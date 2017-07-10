@@ -48,7 +48,7 @@ void RegionGrowingSeg(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	reg.setInputCloud (cloud);
   	//reg.setIndices (indices);
 	reg.setInputNormals (normals);
-	reg.setSmoothnessThreshold (5.0 / 180.0 * M_PI);
+	reg.setSmoothnessThreshold (3.0 / 180.0 * M_PI);
 	reg.setCurvatureThreshold (1.0);
 	reg.extract (clusters);
 	colored_cloud = reg.getColoredCloud ();

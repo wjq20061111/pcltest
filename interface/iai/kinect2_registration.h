@@ -41,7 +41,7 @@ protected:
   cv::Mat cameraMatrixRegistered, cameraMatrixDepth, rotation, translation, mapX, mapY;
   cv::Size sizeRegistered, sizeDepth;
   float zNear, zFar;
-    std::vector<Eigen::Vector4d> pointxyz;
+
 
   DepthRegistration();
 
@@ -54,8 +54,7 @@ public:
             const cv::Mat &distortionDepth, const cv::Mat &rotation, const cv::Mat &translation,
             const float zNear = 0.5f, const float zFar = 12.0f, const int deviceId = -1);
 
-  virtual bool registerDepth(const cv::Mat &depth, cv::Mat &registered,cv::Mat &color,pcl::PointCloud<PointT>::Ptr &src_cloud) = 0;
-  virtual void getxyz(int x,int y,Eigen::Vector4d &pointP)=0;
+  virtual bool registerDepth(const cv::Mat &depth, cv::Mat &registered) = 0;
   static DepthRegistration *New(Method method = DEFAULT);
 };
 

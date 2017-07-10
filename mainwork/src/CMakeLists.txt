@@ -44,3 +44,17 @@ ADD_EXECUTABLE(temptest
 TARGET_LINK_LIBRARIES(temptest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}   ${Boost_LIBRARIES} ${FLANN_LIBRARIES} ${HDF5_hdf5_LIBRARY} libmypcl interface
 ) 
+
+ADD_EXECUTABLE(capture
+  capture.cpp 
+)
+TARGET_LINK_LIBRARIES(capture
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}    libmypcl interface
+) 
+
+ADD_EXECUTABLE(buildmodel
+  buildmodel.cpp 
+)
+TARGET_LINK_LIBRARIES(buildmodel
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES}    libmypcl interface
+) 

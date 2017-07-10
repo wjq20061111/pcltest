@@ -7,6 +7,8 @@
 //#include <mutex>
 //#include <chrono>
 #include <sys/stat.h>
+#include <cmath>
+#include <limits>  
 
 //kinect2
 #include <libfreenect2/libfreenect2.hpp>
@@ -48,6 +50,7 @@ private:
 	cv::Mat rotation, translation;
 	cv::Mat map1Color, map2Color, map1Ir, map2Ir, map1LowRes, map2LowRes;
 	DepthRegistration *depthRegLowRes, *depthRegHighRes;
+	 cv::Mat lookupX, lookupY;
 	double depthShift;
 
 	//libfreenect2 interface
@@ -200,7 +203,6 @@ public:
 		distortionIr.at<double>(0, 2) = irParams.p1;
 		distortionIr.at<double>(0, 3) = irParams.p2;
 		distortionIr.at<double>(0, 4) = irParams.k3;
-
 		cameraMatrixDepth = cameraMatrixIr.clone();
 		distortionDepth = distortionIr.clone();
 
@@ -269,7 +271,7 @@ public:
 		cameraMatrixLowRes.at<double>(1, 2) /= 2;
 		const int mapType = CV_16SC2;
 		cv::initUndistortRectifyMap(cameraMatrixColor, distortionColor, cv::Mat(), cameraMatrixColor, sizeColor, mapType, map1Color, map2Color);
-		cv::initUndistortRectifyMap(cameraMatrixDepth, distortionDepth, cv::Mat(), cameraMatrixDepth, sizeIr, mapType, map1Ir, map2Ir);
+		cv::initUndistortRectifyMap(cameraMatrixIr, distortionIr, cv::Mat(), cameraMatrixIr, sizeIr, mapType, map1Ir, map2Ir);
 		cv::initUndistortRectifyMap(cameraMatrixColor, distortionColor, cv::Mat(), cameraMatrixLowRes, sizeLowRes, mapType, map1LowRes, map2LowRes);
 	}
 
@@ -323,13 +325,13 @@ public:
 		return true;
 	}
 
-	void processIrDepth(const cv::Mat &depth, std::vector<cv::Mat> &images,pcl::PointCloud<PointT>::Ptr &src_cloud)
+	void processIrDepth(const cv::Mat &depth, std::vector<cv::Mat> &images)
 	{
 		cv::Mat depthShifted;
 		depth.convertTo(depthShifted, CV_16U, 1, depthShift);
 		cv::flip(depthShifted, depthShifted, 1);
 		cv::remap(depthShifted, images[DEPTH_SD_RECT], map1Ir, map2Ir, cv::INTER_NEAREST);
-		depthRegLowRes->registerDepth(depthShifted, images[DEPTH_QHD],images[COLOR_QHD_RECT],src_cloud);
+		depthRegLowRes->registerDepth(depthShifted, images[DEPTH_QHD]);
 		//depthRegHighRes->registerDepth(depthShifted, images[DEPTH_HD]);
 
 	}
@@ -347,24 +349,70 @@ public:
 		cv::cvtColor(images[COLOR_QHD_RECT], images[MONO_QHD_RECT], CV_BGR2GRAY);
 	}
 
-	void creatpointcloud(pcl::PointCloud<PointT>::Ptr &src_cloud ,std::vector<cv::Mat> &images)
-	{
-		// for(int x=0;x < sizeLowRes.height; ++x)
-		// 	for(int y=0;y < sizeLowRes.width; ++y)
-		// 	{
-		// 		Eigen::Vector4d pointP;
-		// 		pcl::PointCloud<PointT>::PointType p;
-		// 		depthRegLowRes->getxyz(x,y,pointP);
-		// 		p.x = pointP[0];
-		// 		p.y = pointP[1];
-		// 		p.z = pointP[2];
-		// 		cv::Vec3b bgr = images[COLOR_QHD_RECT].at<cv::Vec3b>(x,y);
-		// 		p.b = bgr[0];
-		// 		p.g = bgr[1];
-		// 		p.r = bgr[2];
-		// 		src_cloud->push_back(p);
-		// 	}
-	}
+
+  void createLookup(size_t width, size_t height)
+  {
+    const float fx = 1.0f / cameraMatrixLowRes.at<double>(0, 0);
+    const float fy = 1.0f / cameraMatrixLowRes.at<double>(1, 1);
+    const float cx = cameraMatrixLowRes.at<double>(0, 2);
+    const float cy = cameraMatrixLowRes.at<double>(1, 2);
+    float *it;
+
+    lookupY = cv::Mat(1, height, CV_32F);
+    it = lookupY.ptr<float>();
+    for(size_t r = 0; r < height; ++r, ++it)
+    {
+      *it = (r - cy) * fy;
+    }
+
+    lookupX = cv::Mat(1, width, CV_32F);
+    it = lookupX.ptr<float>();
+    for(size_t c = 0; c < width; ++c, ++it)
+    {
+      *it = (c - cx) * fx;
+    }
+  }
+
+  void createCloud(const cv::Mat &depth, const cv::Mat &color, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &cloud) 
+  {
+  createLookup(color.cols,color.rows);
+    cloud->height = color.rows;
+    cloud->width = color.cols;
+    cloud->is_dense = false;
+    cloud->points.resize(cloud->height * cloud->width);
+
+    const float badPoint = std::numeric_limits<float>::quiet_NaN();
+
+    #pragma omp parallel for
+    for(int r = 0; r < depth.rows; ++r)
+    {
+      pcl::PointXYZRGBA *itP = &cloud->points[r * depth.cols];
+      const uint16_t *itD = depth.ptr<uint16_t>(r);
+      const cv::Vec3b *itC = color.ptr<cv::Vec3b>(r);
+      const float y = lookupY.at<float>(0, r);
+      const float *itX = lookupX.ptr<float>();
+
+      for(size_t c = 0; c < (size_t)depth.cols; ++c, ++itP, ++itD, ++itC, ++itX)
+      {
+        register const float depthValue = *itD / 1000.0f;
+        // Check for invalid measurements
+        if(*itD == 0)
+        {
+          // not valid
+          itP->x = itP->y = itP->z = badPoint;
+          itP->rgba = 0;
+          continue;
+        }
+        itP->z = depthValue;
+        itP->x = *itX * depthValue;
+        itP->y = y * depthValue;
+        itP->b = itC->val[0];
+        itP->g = itC->val[1];
+        itP->r = itC->val[2];
+        itP->a = 255;
+      }
+    }
+  }
 
 };
 
@@ -376,8 +424,11 @@ int main (int argc, char** argv)
 	// Mat registered_cv=imread("registered.jpg");
 	iaiKinect iai;
 	std::vector<cv::Mat> images(iaiKinect::COUNT);
+	if(iai.startkinect()==-1)
+	{
+		return -1;
+	}
 	iai.initialize();
-	iai.startkinect();
 
 	if (!iai.listener->waitForNewFrame(iai.frames, 10*1000)) // 10 sconds
 	{
@@ -395,13 +446,15 @@ int main (int argc, char** argv)
 
 	iai.processColor(rgbmat,images);
 pcl::PointCloud<PointT>::Ptr src_cloud (new pcl::PointCloud<PointT>);
-	iai.processIrDepth(depthmat,images,src_cloud);
-
+	iai.processIrDepth(depthmat,images);
+//iai.createLookup(images[iaiKinect::COLOR_QHD_RECT].cols, images[iaiKinect::COLOR_QHD_RECT].rows);
+iai.createCloud(images[iaiKinect::DEPTH_QHD],images[iaiKinect::COLOR_QHD_RECT],src_cloud);
+std::cout<<images[iaiKinect::DEPTH_QHD].size()<<images[iaiKinect::COLOR_QHD_RECT].size()<<std::endl;
 //iai.creatpointcloud(src_cloud,images);
 
- // cv::imshow("rig",images[iaiKinect::COLOR_QHD_RECT]);
- // cv::imshow("rigd",images[iaiKinect::DEPTH_QHD]);
- // cv::waitKey();
+//  cv::imshow("rig",images[iaiKinect::COLOR_QHD_RECT]);
+//  cv::imshow("rigd",images[iaiKinect::DEPTH_QHD]*10);
+//  cv::waitKey();
 pclviewer(src_cloud);
 	iai.listener->release(iai.frames);
 	iai.stopkinect();

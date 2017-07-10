@@ -42,19 +42,19 @@ TARGET_LINK_LIBRARIES(segtest
   ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl ${Boost_LIBRARIES} ${FLANN_LIBRARIES} ${HDF5_hdf5_LIBRARY}
 ) 
 
-ADD_EXECUTABLE(vfhtest
-  vfhtest.cpp 
-)
-TARGET_LINK_LIBRARIES(vfhtest 
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
-) 
+#ADD_EXECUTABLE(vfhtest
+#  vfhtest.cpp 
+#)
+#TARGET_LINK_LIBRARIES(vfhtest 
+#  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
+#) 
 
-ADD_EXECUTABLE(capture
-  capture.cpp feature.cpp
-)
-TARGET_LINK_LIBRARIES(capture
-  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl ${Boost_LIBRARIES} ${FLANN_LIBRARIES} ${HDF5_hdf5_LIBRARY}
-) 
+#ADD_EXECUTABLE(capture
+#  capture.cpp feature.cpp
+#)
+#TARGET_LINK_LIBRARIES(capture
+#  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl ${Boost_LIBRARIES} ${FLANN_LIBRARIES} ${HDF5_hdf5_LIBRARY}
+#) 
 
 #ADD_EXECUTABLE(viewtest
 #  viewtest.cpp
@@ -62,3 +62,10 @@ TARGET_LINK_LIBRARIES(capture
 #TARGET_LINK_LIBRARIES(viewtest
 #  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
 #) 
+
+ADD_EXECUTABLE(interface
+  interface.cpp
+)
+TARGET_LINK_LIBRARIES(interface
+  ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${PCL_LIBRARIES} libmypcl
+) 

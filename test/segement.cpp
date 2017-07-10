@@ -48,7 +48,7 @@ void RegionGrowingSeg(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	reg.setInputCloud (cloud);
   	//reg.setIndices (indices);
 	reg.setInputNormals (normals);
-	reg.setSmoothnessThreshold (5.0 / 180.0 * M_PI);
+	reg.setSmoothnessThreshold (3.0 / 180.0 * M_PI);
 	reg.setCurvatureThreshold (1.0);
 	reg.extract (clusters);
 	colored_cloud = reg.getColoredCloud ();
@@ -124,7 +124,7 @@ void calEuclideanClusterExtraction(const pcl::PointCloud<PointT>::Ptr  &cloud ,
 	tree->setInputCloud (copy_src_cloud);
 
 	pcl::EuclideanClusterExtraction<PointT> ec;
-	ec.setClusterTolerance (0.02); // 2cm
+	ec.setClusterTolerance (0.01); // 2cm
 	ec.setMinClusterSize (80);
 	ec.setMaxClusterSize (25000);
 	ec.setSearchMethod (tree);

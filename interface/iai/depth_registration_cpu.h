@@ -39,8 +39,8 @@ public:
   ~DepthRegistrationCPU();
 
   bool init(const int deviceId);
-void getxyz(int x,int y,Eigen::Vector4d &pointP);
-  bool registerDepth(const cv::Mat &depth, cv::Mat &registered,cv::Mat &color,pcl::PointCloud<PointT>::Ptr &src_cloud);
+
+  bool registerDepth(const cv::Mat &depth, cv::Mat &registered);
 
 private:
   void createLookup();
@@ -48,7 +48,7 @@ private:
   uint16_t interpolate(const cv::Mat &in, const float &x, const float &y) const;
  
   void remapDepth(const cv::Mat &depth, cv::Mat &scaled) const;
-  void projectDepth(const cv::Mat &scaled, cv::Mat &registered,cv::Mat &color,pcl::PointCloud<PointT>::Ptr &src_cloud) ;
+  void projectDepth(const cv::Mat &scaled, cv::Mat &registered) ;
 };
 
 #endif //__DEPTH_REGISTRATION_CPU_H__

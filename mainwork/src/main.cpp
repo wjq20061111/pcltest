@@ -20,7 +20,8 @@ int main (int argc, char** argv)
 	pcl::PointCloud<PointT>::Ptr src_cloud (new pcl::PointCloud<PointT>);
 	
 	getKinectcloud(src_cloud);
-	
+	writer.write<PointT> ("src_cloud.pcd", *src_cloud, false);
+
 	pcl::PointCloud<PointT>::Ptr cloud_filtered (new pcl::PointCloud<PointT>);
 	pcl::PointCloud<PointT>::Ptr cloud_passfiltered (new pcl::PointCloud<PointT>);
 	passthroughfilter(src_cloud,cloud_passfiltered,'z',0,2);
@@ -30,7 +31,7 @@ int main (int argc, char** argv)
 	std::vector<int> viewport;
 	int viewportm;
 	int viewportc=0;int viewportmax=0;
-	int numk=4;
+	int numk=5;
 	for(int i=0;i<numk;i++)
 	{
 		for(int j=0;j<numk;j++)
@@ -133,8 +134,8 @@ extractinliers(cloud_filtered,
 
 	std::vector<pcl::PointIndices> cluster_indices;
 	pcl::PointCloud<PointT>::Ptr copy_src_cloud (new pcl::PointCloud<PointT>());
-	downsamplefilter(cloud_trueplane, copy_src_cloud);
-	//pcl::copyPointCloud(*cloud_trueplane, *copy_src_cloud); 
+	//downsamplefilter(cloud_trueplane, copy_src_cloud);
+	pcl::copyPointCloud(*cloud_trueplane, *copy_src_cloud); 
 	
 		if(viewportc<viewportmax)
 	{
@@ -152,8 +153,8 @@ extractinliers(cloud_filtered,
 	tree->setInputCloud (copy_src_cloud);
 
 	pcl::EuclideanClusterExtraction<PointT> ec;
-	ec.setClusterTolerance (0.02); // 2cm
-	ec.setMinClusterSize (100);
+	ec.setClusterTolerance (0.01); // 2cm
+	ec.setMinClusterSize (200);
 	ec.setMaxClusterSize (25000);
 	ec.setSearchMethod (tree);
 	ec.setInputCloud (copy_src_cloud);

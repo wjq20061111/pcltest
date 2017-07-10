@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/w/Desktop/Workspace/pcltest/mainwork/src/tempbuild
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named buildmodel
+
+# Build rule for target.
+buildmodel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 buildmodel
+.PHONY : buildmodel
+
+# fast build rule for target.
+buildmodel/fast:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/build
+.PHONY : buildmodel/fast
+
+#=============================================================================
+# Target rules for targets named capture
+
+# Build rule for target.
+capture: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 capture
+.PHONY : capture
+
+# fast build rule for target.
+capture/fast:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/build
+.PHONY : capture/fast
 
 #=============================================================================
 # Target rules for targets named libmypcl
@@ -175,6 +201,60 @@ VFH.s: VFH.cpp.s
 VFH.cpp.s:
 	$(MAKE) -f CMakeFiles/libmypcl.dir/build.make CMakeFiles/libmypcl.dir/VFH.cpp.s
 .PHONY : VFH.cpp.s
+
+buildmodel.o: buildmodel.cpp.o
+
+.PHONY : buildmodel.o
+
+# target to build an object file
+buildmodel.cpp.o:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.o
+.PHONY : buildmodel.cpp.o
+
+buildmodel.i: buildmodel.cpp.i
+
+.PHONY : buildmodel.i
+
+# target to preprocess a source file
+buildmodel.cpp.i:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.i
+.PHONY : buildmodel.cpp.i
+
+buildmodel.s: buildmodel.cpp.s
+
+.PHONY : buildmodel.s
+
+# target to generate assembly for a file
+buildmodel.cpp.s:
+	$(MAKE) -f CMakeFiles/buildmodel.dir/build.make CMakeFiles/buildmodel.dir/buildmodel.cpp.s
+.PHONY : buildmodel.cpp.s
+
+capture.o: capture.cpp.o
+
+.PHONY : capture.o
+
+# target to build an object file
+capture.cpp.o:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.o
+.PHONY : capture.cpp.o
+
+capture.i: capture.cpp.i
+
+.PHONY : capture.i
+
+# target to preprocess a source file
+capture.cpp.i:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.i
+.PHONY : capture.cpp.i
+
+capture.s: capture.cpp.s
+
+.PHONY : capture.s
+
+# target to generate assembly for a file
+capture.cpp.s:
+	$(MAKE) -f CMakeFiles/capture.dir/build.make CMakeFiles/capture.dir/capture.cpp.s
+.PHONY : capture.cpp.s
 
 feature.o: feature.cpp.o
 
@@ -425,14 +505,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... buildmodel"
+	@echo "... rebuild_cache"
+	@echo "... capture"
 	@echo "... libmypcl"
 	@echo "... temptest"
 	@echo "... interface"
 	@echo "... VFH.o"
 	@echo "... VFH.i"
 	@echo "... VFH.s"
+	@echo "... buildmodel.o"
+	@echo "... buildmodel.i"
+	@echo "... buildmodel.s"
+	@echo "... capture.o"
+	@echo "... capture.i"
+	@echo "... capture.s"
 	@echo "... feature.o"
 	@echo "... feature.i"
 	@echo "... feature.s"

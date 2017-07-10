@@ -57,6 +57,10 @@ vector
 -
 sys/stat.h
 -
+cmath
+-
+limits
+-
 libfreenect2/libfreenect2.hpp
 -
 libfreenect2/frame_listener_impl.h

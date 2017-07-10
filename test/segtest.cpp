@@ -28,7 +28,7 @@ int main (int argc, char** argv)
 	ssf<< "cap/orig0.pcd";
 	pcl::PCDReader reader;
 	pcl::PCDWriter writer;
-	reader.read ("data2.pcd", *src_cloud);
+	reader.read ("src_cloud.pcd", *src_cloud);
 	//reader.read (ssf.str(), *src_cloud);
 
 //Preprocessing
@@ -174,7 +174,7 @@ int main (int argc, char** argv)
 	std::vector<pcl::PointIndices> cluster_indices;
 	pcl::EuclideanClusterExtraction<PointT> ec;
 	ec.setClusterTolerance (0.02); // 2cm
-	ec.setMinClusterSize (100);
+	ec.setMinClusterSize (80);
 	ec.setMaxClusterSize (25000);
 	ec.setSearchMethod (tree);
 	ec.setInputCloud (copy_src_cloud);
